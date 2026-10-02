@@ -1,3 +1,5 @@
 # Atlas Crack / Deobfuscated
-simple crack, just download the code and load unpacked the "crack" folder, read docs if you wanna know how its cracked and such
-this is such a shit cheat and its fully vibecoded, have fun ok thanks
+simple crack\
+# tutorial
+to install download source or pull wtv, load unpacked (on chrome://extensions/) the "crack" folder\
+thas it ok bye
