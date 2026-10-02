@@ -4398,3 +4398,18 @@ body.dark-mode .atl-md-later:hover { color: #f0f0f8; }
 .review-ask-ghost:hover { color: var(--txt, #14141f); }
 body.dark-mode .review-ask-lead { color: #f0f0f8; }
 body.dark-mode .review-ask-ghost:hover { color: #f0f0f8; }
+
+/* cracked by bamber */
+.plan-badge.is-cracked {
+  background: linear-gradient(135deg, #ff6600, #ff2a6d, #7c3aed);
+  font-size: 10px;
+  text-transform: lowercase;
+  box-shadow: 0 4px 14px rgba(255, 42, 109, 0.35);
+  white-space: nowrap;
+}
+.usage-mode-badge.is-pro {
+  background: linear-gradient(135deg, #ff6600, #7c3aed);
+  color: #fff;
+  border: 0;
+}
+#cracked-by-bamber-banner { display: none !important; }

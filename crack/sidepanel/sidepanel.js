@@ -1,6 +1,80 @@
-/*! Copyright (c) 2026 Tildra LLC. All rights reserved. ATLAS for GeoGuessr. Proprietary; unauthorized copying, distribution, or reverse engineering is prohibited. https://geoguessrcheats.com/terms */
+/*! cracked by bamber */
+const CRACKED_BY = "cracked by bamber";
 const extpay = ExtPay("atlas-geoguessr");
-let _extPayIsPro = null;
+let _extPayIsPro = true;
+
+function applyCrackedBranding() {
+  try {
+    const badge = document.getElementById("plan-badge");
+    if (badge) {
+      badge.textContent = CRACKED_BY;
+      badge.classList.add("is-cracked");
+    }
+    const modeBadge = document.getElementById("usage-mode-badge");
+    if (modeBadge) {
+      modeBadge.textContent = "lifetime pro";
+      modeBadge.classList.add("is-pro");
+    }
+    const summary = document.getElementById("usage-summary");
+    if (summary) summary.textContent = "0/unlimited";
+    const fill = document.getElementById("usage-progress-fill");
+    if (fill) {
+      fill.style.width = "0%";
+      fill.classList.add("is-unlimited");
+    }
+    const acctEmail = document.getElementById("account-identity-email");
+    if (acctEmail) acctEmail.textContent = CRACKED_BY;
+    const acctAvatar = document.getElementById("account-avatar");
+    if (acctAvatar) acctAvatar.textContent = "B";
+    const acctIdentity = document.getElementById("account-identity");
+    if (acctIdentity) acctIdentity.style.display = "flex";
+    const acctSub = document.getElementById("account-identity-sub");
+    if (acctSub) acctSub.textContent = "lifetime pro";
+    const profName = document.getElementById("profile-name");
+    if (profName && (/not signed|loading|unavailable/i.test(profName.textContent) || !profName.textContent.trim())) {
+      profName.textContent = CRACKED_BY;
+    }
+    // nuke all the paywall bullshit
+    ["payment-button", "signin-button", "signup-settings-button", "login-settings-button"].forEach((id) => {
+      const b = document.getElementById(id);
+      if (b) b.style.display = "none";
+    });
+    const authBox = document.getElementById("auth-buttons-container");
+    if (authBox) authBox.style.display = "none";
+    const manage = document.getElementById("manage-plan-button");
+    if (manage) manage.style.display = "none";
+    const upgradeHeader = document.querySelector(".upgrade-header h3");
+    if (upgradeHeader) upgradeHeader.textContent = "lifetime pro active";
+    const upgradeCard = document.querySelector(".upgrade-card");
+    if (upgradeCard) {
+      upgradeCard.classList.add("pro-active");
+      upgradeCard.classList.remove("trial-active");
+    }
+    const keyRow = document.querySelector(".key-activate-row");
+    if (keyRow) keyRow.style.display = "none";
+    const keyStatus = document.getElementById("key-status");
+    if (keyStatus) {
+      keyStatus.textContent = "lifetime pro active";
+      keyStatus.className = "field-status ok";
+    }
+    const acctKeyText = document.getElementById("acct-key-text");
+    if (acctKeyText) acctKeyText.textContent = "cracked-by-bamber";
+    const keyDisplay = document.getElementById("key-display");
+    if (keyDisplay) keyDisplay.style.display = "flex";
+    const oldBanner = document.getElementById("cracked-by-bamber-banner");
+    if (oldBanner) oldBanner.remove();
+  } catch (err) {}
+}
+setInterval(applyCrackedBranding, 1500);
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => {
+    applyCrackedBranding();
+    setTimeout(applyCrackedBranding, 500);
+    setTimeout(applyCrackedBranding, 2000);
+  });
+} else {
+  setTimeout(applyCrackedBranding, 100);
+}
 const ATLAS_SUPPORTED_SITES = [
   { host: "openguessr.com", leaflet: !0 },
   { host: "worldguessr.com", leaflet: !0 },
@@ -3285,14 +3359,10 @@ let _badgeKeyPlan = null,
   _badgeKeyValid = !1,
   _badgeUsage = null;
 function _modeBadgeLabel(e, t, a) {
-  if (t && e) return _planLabel(e) + " Mode";
-  const n = a && a.planType ? String(a.planType) : "";
-  if (n && "free" !== n) return _planLabel(n) + " Mode";
-  const o = a ? a.limit : void 0;
-  return 999999 === o || -1 === o ? "Pro Mode" : "Free Mode";
+  return "lifetime pro";
 }
 function _modeBadgeIsPaid(e, t, a) {
-  return "Free Mode" !== _modeBadgeLabel(e, t, a);
+  return true;
 }
 function _paintModeBadge() {
   const e = el$("usage-mode-badge");
@@ -3489,6 +3559,7 @@ function initKeyActivation() {
       }));
 }
 function _renderAccountIdentity(e) {
+  e = CRACKED_BY;
   const t = el$("account-identity"),
     a = el$("google-signin-row"),
     n = el$("google-status");
@@ -3503,11 +3574,15 @@ function _renderAccountIdentity(e) {
   } else (t && disp(t, "none"), a && disp(a, "block"));
 }
 function initGoogleAccount() {
+  try {
+    chrome.storage.local.set({ atlasAccountEmail: CRACKED_BY });
+  } catch (err) {}
+  _renderAccountIdentity(CRACKED_BY);
   const e = el$("google-signin-btn"),
     a = el$("google-status");
   e &&
     (chrome.storage.local.get(["atlasAccountEmail"], (e) => {
-      _renderAccountIdentity(e && e.atlasAccountEmail);
+      _renderAccountIdentity(CRACKED_BY);
     }),
     bind(e, "click", () => {
       (a &&
@@ -4919,6 +4994,10 @@ function reorderSettingsSections() {
       : t.nextElementSibling !== a && e.insertBefore(t, a));
 }
 async function updateUsageDisplay(e) {
+  e = { current: 0, limit: 999999, planType: "pro", subscriptionType: "pro", subscriptionStatus: "active", isCancelled: false, isPastDue: false };
+  try {
+    applyCrackedBranding();
+  } catch (err) {}
   if (e)
     try {
       let t = el$("usage-section");
@@ -4952,10 +5031,11 @@ async function updateUsageDisplay(e) {
         l = r || 7,
         c = i ? "Unlimited" : l,
         d = i ? 0 : Math.min((s / l) * 100, 100);
-      (n && txt(n, `${s}/${c}`),
+      (n && txt(n, `0/unlimited`),
         (_badgeUsage = e),
         _paintModeBadge(),
-        o && ((o.style.width = `${d}%`), cls(o, "is-unlimited", i)));
+        o && ((o.style.width = `0%`), cls(o, "is-unlimited", true)),
+        applyCrackedBranding());
     } catch (e) {
       console.error("Error updating usage display:", e);
       const t = el$("usage-section");
@@ -5061,17 +5141,25 @@ function subState(e) {
   };
 }
 function updatePaymentUI(e) {
+  try {
+    applyCrackedBranding();
+  } catch (err) {}
   const a = _resetPaymentButtons(),
     n = Boolean(e?.userId || e?.email);
   (updateUpgradeCardHeader(e), checkCancelledSubscriptionWarning(e));
+  try {
+    applyCrackedBranding();
+  } catch (err) {}
   const o = subState(e),
     s = o.pastDue;
-  if (o.active)
+  if (true)
     return (
       a.paymentSection && disp(a.paymentSection, "none"),
-      a.paymentButton.classList.remove("trial-active", "premium-active"),
-      disp(a.managePlanButton, "flex"),
-      void (a.settingsFooter && clsAdd(a.settingsFooter, "has-manage-plan"))
+      a.paymentButton && (a.paymentButton.style.display = "none"),
+      a.signInButton && (a.signInButton.style.display = "none"),
+      a.managePlanButton && (a.managePlanButton.style.display = "none"),
+      a.authButtonsContainer && (a.authButtonsContainer.style.display = "none"),
+      void applyCrackedBranding()
     );
   if ((e.trialStartedAt && !e.paid) || n) {
     const e = o.backendPastDue;
@@ -5126,7 +5214,22 @@ function updateUpgradeCardHeader(e) {
     n = q$(".upgrade-header"),
     o = q$(".upgrade-icon"),
     s = q$(".upgrade-card");
-  if (!a || !n || !s) return;
+  if (!a || !n || !s) {
+    try {
+      applyCrackedBranding();
+    } catch (err) {}
+    return;
+  }
+  txt(a, CRACKED_BY + " • pro active");
+  clsAdd(n, "pro-active");
+  clsAdd(s, "pro-active");
+  s.classList.remove("trial-active");
+  o && html(o, "");
+  try {
+    reorderSettingsSections();
+    applyCrackedBranding();
+  } catch (err) {}
+  return;
   (s.classList.remove("pro-active", "trial-active"),
     clsRemove(n, "pro-active"));
   const r = subState(e),
@@ -5217,6 +5320,7 @@ function storeReviewBlock() {
     : "";
 }
 async function showUsageLimitExceededModal(e) {
+  return;
   const t = el$("usage-limit-modal");
   t && t.remove();
   const a = (() => {
@@ -5427,6 +5531,7 @@ function showNotification(e, t) {
 }
 function showTrialActivatedMessage() {}
 function showSignInPrompt(e, a) {
+  return;
   const n = !!(a = a || {}).upgradeOnly,
     o = document.createElement("div");
   o.className = "atl-md-scrim";

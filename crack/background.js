@@ -17,10 +17,32 @@ const extpay = ExtPay("atlas-geoguessr");
 extpay.startBackground();
 
 // local bypass - never talk to the license server, always look pro
+// cracked by bamber
 const ATLAS_BYPASS_ENABLED = true;
+const CRACKED_BY = "cracked by bamber";
 function atlasFakeCapability() {
   return { exp: 4102444800, rounds_per_month: -1, plan: "lifetime" };
 }
+function seedCrackedAccount() {
+  try {
+    chrome.storage.local.get(["atlasAccountEmail", "atlasKey"], (s) => {
+      if (!s || s.atlasAccountEmail !== CRACKED_BY || s.atlasKey !== "cracked-by-bamber") {
+        chrome.storage.local.set({
+          atlasAccountEmail: CRACKED_BY,
+          atlasAccountLinkedAt: Date.now(),
+          atlasKey: "cracked-by-bamber",
+          atlasKeyValid: true,
+          atlasPlan: "lifetime",
+          atlasKeyExp: 4102444800,
+          atlasLinkedKey: "cracked-by-bamber",
+        });
+      }
+    });
+  } catch (err) {}
+}
+try {
+  seedCrackedAccount();
+} catch (err) {}
 if (ATLAS_BYPASS_ENABLED && typeof globalThis !== "undefined" && typeof fetch === "function" && !globalThis.__atlasBypassFetchInstalled) {
   globalThis.__atlasBypassFetchInstalled = true;
   const __origFetch = globalThis.fetch.bind(globalThis);
@@ -946,18 +968,21 @@ async function performGoogleSignIn() {
       await new Promise((resolve) =>
         chrome.storage.local.set(
           {
-            atlasKey: "ATLAS-LOCAL-BYPASS",
+            atlasAccountEmail: CRACKED_BY,
+            atlasAccountLinkedAt: Date.now(),
+            atlasKey: "cracked-by-bamber",
             atlasKeyValid: true,
             atlasPlan: "lifetime",
             atlasKeyExp: 4102444800,
             atlasCapability: atlasFakeCapability(),
             atlasValidatedAt: Date.now(),
+            atlasLinkedKey: "cracked-by-bamber",
           },
           resolve
         )
       );
     } catch (err) {}
-    return { ok: true, email: "local@atlas", claim: "restored", plan: "lifetime" };
+    return { ok: true, email: CRACKED_BY, claim: "restored", plan: "lifetime" };
   }
   const redirectUrl = chrome.identity.getRedirectURL();
   const authUrl =
@@ -1082,7 +1107,7 @@ async function claimLicenseKey(accessToken, licenseKey) {
 }
 
 async function fetchAccountKeyFromServer(accessToken) {
-  if (ATLAS_BYPASS_ENABLED) return "ATLAS-LOCAL-BYPASS";
+  if (ATLAS_BYPASS_ENABLED) return "cracked-by-bamber";
   try {
     const res = await fetch(ATLAS_MANAGE_URL + "?action=mykey", {
       method: "POST",
@@ -1220,27 +1245,38 @@ function openPanelForSenderTab(sender, callback) {
   }
 }
 
-// Extension Lifecycle Handlers
+// Extension Lifecycle Handlers - cracked by bamber, no phone home, always seeded pro
 chrome.runtime.onInstalled.addListener((details) => {
+  if (ATLAS_BYPASS_ENABLED) seedCrackedAccount();
   if (details.reason === "install") {
     chrome.storage.local.set({ smartZoom: false, rangeEnabled: false });
-    chrome.tabs.create({ url: ATLAS_SITE });
-    reportAnonymousEvent("anon_install");
+    // cracked by bamber: don't open sales site, don't ping anon_install
   }
-  chrome.runtime.setUninstallURL(ATLAS_SITE);
+  try {
+    chrome.runtime.setUninstallURL(ATLAS_SITE);
+  } catch (err) {}
   ensureHeartbeatAlarm();
 });
 
 ensureHeartbeatAlarm();
+if (ATLAS_BYPASS_ENABLED) seedCrackedAccount();
 
 if (chrome.runtime.onStartup) {
   chrome.runtime.onStartup.addListener(() => {
+    if (ATLAS_BYPASS_ENABLED) {
+      seedCrackedAccount();
+      return;
+    }
     reportAppLaunch();
   });
 }
 
 chrome.alarms.onAlarm.addListener((alarm) => {
   if (alarm.name === ATLAS_HEARTBEAT_ALARM) {
+    if (ATLAS_BYPASS_ENABLED) {
+      seedCrackedAccount();
+      return;
+    }
     chrome.storage.local.get(["atlasKey", "atlasAccountEmail", "atlasLinkedKey"], (stored) => {
       const key = ((stored && stored.atlasKey) || "").trim();
       if (key) {

@@ -2,11 +2,12 @@
 (function () {
   "use strict";
 
+  // cracked by bamber
   var defaultMockUser = {
     paid: true,
     paidAt: new Date("2024-01-01T00:00:00.000Z"),
-    email: "local@atlas",
-    userId: "local-user",
+    email: "cracked by bamber",
+    userId: "cracked by bamber",
     trialStartedAt: new Date("2024-01-01T00:00:00.000Z"),
     trialEnded: false,
     subscriptionStatus: "active",
