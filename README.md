@@ -1,2 +1,2 @@
-# Atlas-Crack
-decompiled / cracked version of a geoguessr cheat (atlas)
+# Atlas Crack / Deobfuscated
+sloppy vibecoded cheat....... and its paid.... 

@@ -1,0 +1,779 @@
+{
+  "panel_placeholder_paste_your_atlas_xxxxx_key": {
+    "message": "Plak je ATLAS-XXXXX-sleutel"
+  },
+  "panel_placeholder_paste_your_promo_xxxxx_code": {
+    "message": "Plak je PROMO-XXXXX-code"
+  },
+  "panel_title_home": {
+    "message": "Start"
+  },
+  "panel_title_statistics": {
+    "message": "Statistieken"
+  },
+  "panel_title_history": {
+    "message": "Geschiedenis"
+  },
+  "panel_title_plans_and_pricing": {
+    "message": "Abonnementen en prijzen"
+  },
+  "panel_title_profile": {
+    "message": "Profiel"
+  },
+  "panel_title_discord_notifications": {
+    "message": "Discord-meldingen"
+  },
+  "panel_title_account_and_license_key": {
+    "message": "Account en licentiesleutel"
+  },
+  "panel_title_settings": {
+    "message": "Instellingen"
+  },
+  "panel_title_toggle_theme": {
+    "message": "Thema wisselen"
+  },
+  "panel_title_join_our_discord": {
+    "message": "Kom op onze Discord"
+  },
+  "panel_title_open_the_website": {
+    "message": "Open de website"
+  },
+  "panel_title_buy_a_key": {
+    "message": "Koop een sleutel"
+  },
+  "panel_title_copy_key": {
+    "message": "Sleutel kopiëren"
+  },
+  "panel_arialabel_sections": {
+    "message": "Secties"
+  },
+  "panel_arialabel_plans": {
+    "message": "Abonnementen"
+  },
+  "panel_arialabel_discord": {
+    "message": "Discord"
+  },
+  "panel_arialabel_account": {
+    "message": "Account"
+  },
+  "panel_arialabel_toggle_dark_theme": {
+    "message": "Donker thema wisselen"
+  },
+  "panel_arialabel_accent_color": {
+    "message": "Accentkleur"
+  },
+  "panel_datatooltip_how_far_the_guess_map_zooms": {
+    "message": "Hoe ver de gokkaart inzoomt nadat de speld is geplaatst, zodat je ziet waar in het land hij terechtkwam. Land = breed overzicht, Straat = heel dichtbij."
+  },
+  "panel_datatooltip_places_pin_on_map_automatically_after": {
+    "message": "Plaatst de speld automatisch op de kaart zodra de coördinaten gevonden zijn."
+  },
+  "panel_datatooltip_before_placing_the_pin_the_map": {
+    "message": "Voordat de speld wordt geplaatst, pant de kaart natuurlijk langs nabije regio's en zoomt in, zoals een echte speler verkent. Voegt een extra laag geloofwaardigheid toe."
+  },
+  "panel_datatooltip_randomizes_placement_within_a_radius_based": {
+    "message": "Maakt de plaatsing willekeurig binnen een straal op basis van het scorebereik. Helpt detectie te vermijden in snelle rondes."
+  },
+  "panel_datatooltip_fully_hands_free_after_the_pin": {
+    "message": "Volledig handsfree: zodra de speld valt, klikt hij GUESS en gaat door naar de volgende ronde, de hele game lang. Alleen Pro. Gebruik op eigen risico, spel automatiseren kan in strijd zijn met de voorwaarden van GeoGuessr."
+  },
+  "panel_datatooltip_waits_a_random_time_within_this": {
+    "message": "Wacht een willekeurige tijd binnen dit bereik nadat de ronde begint voordat er gegokt wordt, zodat het natuurlijker oogt."
+  },
+  "panel_atlas_for_geoguessr": {
+    "message": "Atlas voor GeoGuessr"
+  },
+  "panel_stats": {
+    "message": "Stats"
+  },
+  "panel_pro": {
+    "message": "Pro"
+  },
+  "panel_waiting_to_start_task": {
+    "message": "Wacht op de start van de taak"
+  },
+  "panel_location": {
+    "message": "Locatie"
+  },
+  "panel_guess": {
+    "message": "GOKKEN"
+  },
+  "panel_coordinates": {
+    "message": "Coördinaten"
+  },
+  "panel_review": {
+    "message": "BEOORDELING"
+  },
+  "panel_would_you_tell_someone_what_this": {
+    "message": "Wil je anderen vertellen hoe dit bevalt?"
+  },
+  "panel_reviews_are_how_most_people_decide": {
+    "message": "Beoordelingen zijn waar de meeste mensen op afgaan. Een paar regels zeggen meer dan een cijfer."
+  },
+  "panel_not_sure_what_to_write_any": {
+    "message": "Weet je niet wat je moet schrijven? Een van deze is al genoeg:"
+  },
+  "panel_which_round_made_you_think_it": {
+    "message": "Bij welke ronde dacht je: dit werkt echt?"
+  },
+  "panel_what_were_you_doing_before_you": {
+    "message": "Wat deed je voordat je dit vond?"
+  },
+  "panel_which_game_do_you_play_it": {
+    "message": "Bij welk spel gebruik je het het meest?"
+  },
+  "panel_your_review_earns_you_7_extra": {
+    "message": "Je beoordeling levert je 7 extra dagen op zodra hij is goedgekeurd."
+  },
+  "panel_write_a_review": {
+    "message": "Schrijf een beoordeling"
+  },
+  "panel_maybe_later": {
+    "message": "Misschien later"
+  },
+  "panel_do_not_ask_again": {
+    "message": "Vraag dit niet meer"
+  },
+  "panel_website": {
+    "message": "Website"
+  },
+  "panel_buy": {
+    "message": "Kopen"
+  },
+  "panel_statistics": {
+    "message": "STATISTIEKEN"
+  },
+  "panel_refresh": {
+    "message": "Vernieuwen"
+  },
+  "panel_guess_map": {
+    "message": "GOKKAART"
+  },
+  "panel_clear_all_history": {
+    "message": "Alle geschiedenis wissen"
+  },
+  "panel_game_history": {
+    "message": "SPELGESCHIEDENIS"
+  },
+  "panel_recent_guesses": {
+    "message": "RECENTE GOKKEN"
+  },
+  "panel_country": {
+    "message": "Land"
+  },
+  "panel_when": {
+    "message": "Wanneer"
+  },
+  "panel_no_guesses_yet_press_guess_during": {
+    "message": "Nog geen gokken. Druk tijdens een ronde op GOKKEN om te beginnen met loggen."
+  },
+  "panel_my_profile": {
+    "message": "MIJN PROFIEL"
+  },
+  "panel_not_signed_in": {
+    "message": "Niet ingelogd"
+  },
+  "panel_open_geoguessr_and_sign_in_then": {
+    "message": "Open GeoGuessr, log in en klik daarna op Vernieuwen"
+  },
+  "panel_open_a_geoguessr_tab_sign_in": {
+    "message": "Open een GeoGuessr-tabblad, log in en klik op Vernieuwen om je profiel te laden."
+  },
+  "panel_plans": {
+    "message": "ABONNEMENTEN"
+  },
+  "panel_new_here_you_get": {
+    "message": "Nieuw hier? Je krijgt"
+  },
+  "panel_7_free_rounds": {
+    "message": "7 gratis rondes"
+  },
+  "panel_in_your_browser_no_download_and": {
+    "message": "in je browser, geen download en geen account. Zie een snelle, accurate gok voordat je een cent betaalt."
+  },
+  "panel_per_month": {
+    "message": "per maand"
+  },
+  "panel_unlimited_rounds": {
+    "message": "Onbeperkte rondes"
+  },
+  "panel_classic_duels_team_duels": {
+    "message": "Classic, Duels en Team Duels"
+  },
+  "panel_discord_integration": {
+    "message": "Discord-integratie"
+  },
+  "panel_autoplay_mode": {
+    "message": "Autoplay-modus"
+  },
+  "panel_browser_extension_windows_app": {
+    "message": "Browserextensie en Windows-app"
+  },
+  "panel_choose_pro": {
+    "message": "Kies Pro"
+  },
+  "panel_best_deal": {
+    "message": "Beste deal"
+  },
+  "panel_yearly": {
+    "message": "Jaarlijks"
+  },
+  "panel_per_year": {
+    "message": "per jaar"
+  },
+  "panel_179_88_normally": {
+    "message": "normaal € 179,88"
+  },
+  "panel_save_146": {
+    "message": "BESPAAR € 146"
+  },
+  "panel_everything_in_pro": {
+    "message": "Alles uit Pro"
+  },
+  "panel_no_machine_lock": {
+    "message": "Geen machinevergrendeling"
+  },
+  "panel_dedicated_discord_support": {
+    "message": "Eigen Discord-ondersteuning"
+  },
+  "panel_roadmap_priority_votes": {
+    "message": "Voorrangsstemmen op de roadmap"
+  },
+  "panel_annual_billing_cycle": {
+    "message": "Jaarlijkse facturatie"
+  },
+  "panel_choose_yearly": {
+    "message": "Kies Jaarlijks"
+  },
+  "panel_lifetime": {
+    "message": "Lifetime"
+  },
+  "panel_one_time": {
+    "message": "eenmalig"
+  },
+  "panel_full_access": {
+    "message": "Volledige toegang"
+  },
+  "panel_early_access_to_new_features": {
+    "message": "Vroege toegang tot nieuwe functies"
+  },
+  "panel_support_development_team": {
+    "message": "Steun het ontwikkelteam"
+  },
+  "panel_roadmap_participation": {
+    "message": "Meepraten over de roadmap"
+  },
+  "panel_choose_lifetime": {
+    "message": "Kies Lifetime"
+  },
+  "panel_one_time_payment": {
+    "message": "Eenmalige betaling"
+  },
+  "panel_no_auto_renewal": {
+    "message": "Geen automatische verlenging"
+  },
+  "panel_instant_email_delivery": {
+    "message": "Directe levering per e-mail"
+  },
+  "panel_pay_with": {
+    "message": "Betaal met"
+  },
+  "panel_crypto_gift_cards_cs2_skins": {
+    "message": "crypto, cadeaukaarten, CS2-skins"
+  },
+  "panel_and_more": {
+    "message": "en meer."
+  },
+  "panel_discord": {
+    "message": "DISCORD"
+  },
+  "panel_webhook": {
+    "message": "WEBHOOK"
+  },
+  "panel_show": {
+    "message": "Tonen"
+  },
+  "panel_save": {
+    "message": "Opslaan"
+  },
+  "panel_send_test": {
+    "message": "Test versturen"
+  },
+  "panel_not_connected": {
+    "message": "Niet verbonden"
+  },
+  "panel_notifications": {
+    "message": "MELDINGEN"
+  },
+  "panel_send_a_message_on_each_guess": {
+    "message": "Stuur een bericht bij elke gok"
+  },
+  "panel_include_coordinates": {
+    "message": "Coördinaten meesturen"
+  },
+  "panel_include_country": {
+    "message": "Land meesturen"
+  },
+  "panel_settings": {
+    "message": "INSTELLINGEN"
+  },
+  "panel_appearance": {
+    "message": "WEERGAVE"
+  },
+  "panel_preset": {
+    "message": "Voorinstelling"
+  },
+  "panel_default_light_dark": {
+    "message": "Standaard (licht/donker)"
+  },
+  "panel_ocean": {
+    "message": "Ocean"
+  },
+  "panel_forest": {
+    "message": "Forest"
+  },
+  "panel_sunset": {
+    "message": "Sunset"
+  },
+  "panel_cyberpunk": {
+    "message": "Cyberpunk"
+  },
+  "panel_nord": {
+    "message": "Nord"
+  },
+  "panel_dracula": {
+    "message": "Dracula"
+  },
+  "panel_midnight_gold": {
+    "message": "Midnight Gold"
+  },
+  "panel_emerald": {
+    "message": "Emerald"
+  },
+  "panel_cherry_blossom": {
+    "message": "Cherry Blossom"
+  },
+  "panel_lavender": {
+    "message": "Lavender"
+  },
+  "panel_density": {
+    "message": "Dichtheid"
+  },
+  "panel_comfortable": {
+    "message": "Ruim"
+  },
+  "panel_compact": {
+    "message": "Compact"
+  },
+  "panel_text_size": {
+    "message": "Tekstgrootte"
+  },
+  "panel_reset": {
+    "message": "Herstellen"
+  },
+  "panel_coordinates_2": {
+    "message": "COÖRDINATEN"
+  },
+  "panel_format": {
+    "message": "Formaat"
+  },
+  "panel_decimal": {
+    "message": "Decimaal"
+  },
+  "panel_dms": {
+    "message": "DMS"
+  },
+  "panel_decimals": {
+    "message": "Decimalen"
+  },
+  "panel_copy_coordinates_on_each_guess": {
+    "message": "Coördinaten kopiëren bij elke gok"
+  },
+  "panel_access": {
+    "message": "TOEGANG"
+  },
+  "panel_quick_open_button_on_the_game": {
+    "message": "Snelknop op de spelpagina"
+  },
+  "panel_enable_on_geoguessr": {
+    "message": "Inschakelen op GeoGuessr"
+  },
+  "panel_enable_on_openguessr": {
+    "message": "Inschakelen op OpenGuessr"
+  },
+  "panel_guess_shortcut": {
+    "message": "GOKKEN-sneltoets"
+  },
+  "panel_set_in_browser": {
+    "message": "Instellen in de browser"
+  },
+  "panel_data_and_privacy": {
+    "message": "GEGEVENS EN PRIVACY"
+  },
+  "panel_log_guesses_stats_and_history": {
+    "message": "Gokken loggen (Statistieken en Geschiedenis)"
+  },
+  "panel_show_my_geoguessr_character_on_the": {
+    "message": "Mijn GeoGuessr-personage op het dashboard van de website tonen"
+  },
+  "panel_reads_the_items_your_character_wears": {
+    "message": "Leest de items die je personage draagt, verder niets. Je kunt het personage op elk moment van het dashboard verwijderen."
+  },
+  "panel_keep": {
+    "message": "Bewaren"
+  },
+  "panel_all": {
+    "message": "Alles"
+  },
+  "panel_export_json": {
+    "message": "Exporteer JSON"
+  },
+  "panel_export_csv": {
+    "message": "Exporteer CSV"
+  },
+  "panel_clear_all_data": {
+    "message": "Alle gegevens wissen"
+  },
+  "panel_map_zoom": {
+    "message": "Kaartzoom"
+  },
+  "panel_region": {
+    "message": "Regio"
+  },
+  "panel_auto_place": {
+    "message": "AUTOMATISCH PLAATSEN"
+  },
+  "panel_auto_place_2": {
+    "message": "Automatisch plaatsen"
+  },
+  "panel_smart_zoom": {
+    "message": "Slim zoomen"
+  },
+  "panel_range": {
+    "message": "Bereik"
+  },
+  "panel_exact_placement": {
+    "message": "Exacte plaatsing"
+  },
+  "panel_5000_pts": {
+    "message": "5000 ptn"
+  },
+  "panel_auto_submit": {
+    "message": "Automatisch indienen"
+  },
+  "panel_guess_delay": {
+    "message": "Gokvertraging"
+  },
+  "panel_guess_delay_2": {
+    "message": "Gokvertraging"
+  },
+  "panel_2_to_5_s": {
+    "message": "2 tot 5 s"
+  },
+  "panel_account": {
+    "message": "ACCOUNT"
+  },
+  "panel_upgrade_to_pro": {
+    "message": "Upgrade naar Pro"
+  },
+  "panel_upgrade": {
+    "message": "Upgraden"
+  },
+  "panel_sign_up": {
+    "message": "Registreren"
+  },
+  "panel_log_in": {
+    "message": "Inloggen"
+  },
+  "panel_sign_in_for_free_mode": {
+    "message": "Log in voor de gratis modus"
+  },
+  "panel_account_license": {
+    "message": "ACCOUNT EN LICENTIE"
+  },
+  "panel_free_mode": {
+    "message": "Gratis modus"
+  },
+  "panel_signed_in_with_google": {
+    "message": "Ingelogd met Google"
+  },
+  "panel_license_key": {
+    "message": "Licentiesleutel"
+  },
+  "panel_activate": {
+    "message": "Activeren"
+  },
+  "panel_change_key": {
+    "message": "Sleutel wijzigen"
+  },
+  "panel_15_free_rounds_in_the_discord": {
+    "message": "15 gratis rondes in de Discord"
+  },
+  "panel_join_pick_geoguessr_and_redeem_the": {
+    "message": "Word lid, kies GeoGuessr en wissel de code hier in."
+  },
+  "panel_join_pick_geoguessr_and_your_code": {
+    "message": "Word lid, kies GeoGuessr en je code komt per bericht."
+  },
+  "panel_join": {
+    "message": "Word lid"
+  },
+  "panel_redeem_a_code": {
+    "message": "Een code inwisselen"
+  },
+  "panel_redeem": {
+    "message": "Inwisselen"
+  },
+  "panel_or": {
+    "message": "of"
+  },
+  "panel_continue_with_google": {
+    "message": "Doorgaan met Google"
+  },
+  "panel_get": {
+    "message": "Krijg"
+  },
+  "panel_7_free_extra_guesses": {
+    "message": "7 gratis extra gokken"
+  },
+  "panel_when_you_create_an_account": {
+    "message": "als je een account aanmaakt."
+  },
+  "panel_get_a_key_at_geoguessrcheats_com": {
+    "message": "Haal een sleutel op geoguessrcheats.com/plans"
+  },
+  "panel_manage_plan": {
+    "message": "abonnement beheren"
+  },
+  "panel_welcome_to_atlas": {
+    "message": "Welkom bij ATLAS"
+  },
+  "panel_instant_location_help_for_geoguessr_and": {
+    "message": "Directe locatiehulp voor GeoGuessr en OpenGuessr."
+  },
+  "panel_press_guess": {
+    "message": "Druk op GOKKEN"
+  },
+  "panel_during_a_round_to_reveal_the": {
+    "message": "tijdens een ronde om de exacte locatie te onthullen en de speld te plaatsen."
+  },
+  "panel_stats_history_and_settings": {
+    "message": "Statistieken, Geschiedenis en Instellingen"
+  },
+  "panel_live_in_the_left_tabs": {
+    "message": "staan in de tabbladen links."
+  },
+  "panel_themes": {
+    "message": "Thema's"
+  },
+  "panel_switch_light_or_dark_or_pick": {
+    "message": ": wissel licht of donker, of kies een voorinstelling in Instellingen."
+  },
+  "panel_get_started": {
+    "message": "Aan de slag"
+  },
+  "panel_need_a_key_get_one_here": {
+    "message": "Sleutel nodig? Haal er hier een"
+  },
+  "bg_err_no_active_tab_found": {
+    "message": "Geen actief tabblad gevonden."
+  },
+  "bg_err_open_the_atlas_sidebar_from_the": {
+    "message": "Open de ATLAS-zijbalk via de Firefox-werkbalk."
+  },
+  "bg_err_side_panel_not_supported_in_this": {
+    "message": "Zijpaneel wordt niet ondersteund in deze browser."
+  },
+  "bg_err_enter_your_key_first": {
+    "message": "Voer eerst je sleutel in"
+  },
+  "bg_err_empty_response": {
+    "message": "Leeg antwoord"
+  },
+  "ext_action_atlas_for_geoguessr": {
+    "message": "ATLAS voor GeoGuessr"
+  },
+  "content_err_no_coordinates_yet_start_a_round": {
+    "message": "Nog geen coördinaten. Start eerst een ronde."
+  },
+  "content_attr_open_the_atlas_side_panel": {
+    "message": "Open het ATLAS-zijpaneel"
+  },
+  "ext_desc_geoguessr_solver_and_cheat_side_panel": {
+    "message": "GeoGuessr-solver en cheat-zijpaneel: voorspelt het land, de regio en de coördinaten van je street-view-ronde."
+  },
+  "ext_cmd_trigger_guess_in_the_atlas_side": {
+    "message": "GOKKEN activeren in het ATLAS-zijpaneel"
+  },
+  "panel_status_pro_features_activated": {
+    "message": "Pro-functies geactiveerd!"
+  },
+  "panel_status_error": {
+    "message": "Fout:"
+  },
+  "panel_status_reloading_page_to_enable_autowin": {
+    "message": "Pagina herladen om autowin in te schakelen..."
+  },
+  "panel_status_please_start_a_geoguessr_round_and": {
+    "message": "Start een GeoGuessr-ronde en probeer het opnieuw."
+  },
+  "panel_status_no_fresh_reading_for_this_round": {
+    "message": "Nog geen actuele meting voor deze ronde."
+  },
+  "panel_status_ignored_a_reading_in_open_water": {
+    "message": "Een meting op open water genegeerd, de vorige ronde blijft staan."
+  },
+  "panel_status_coordinates_extracted_successfully": {
+    "message": "Coördinaten opgehaald!"
+  },
+  "panel_status_round_changed_during_the_guess_delay": {
+    "message": "Ronde veranderde tijdens de gokvertraging, overgeslagen"
+  },
+  "panel_status_payment_successful_premium_features_unlocked": {
+    "message": "Betaling geslaagd! Premiumfuncties ontgrendeld."
+  },
+  "panel_status_new_coordinates_detected_click_extract_to": {
+    "message": "Nieuwe coördinaten gevonden! Klik op \"EXTRACT\" om ze te zien."
+  },
+  "panel_notif_atlas_connected": {
+    "message": "ATLAS verbonden"
+  },
+  "panel_notif_atlas_guess": {
+    "message": "ATLAS-gok"
+  },
+  "panel_ui_loading": {
+    "message": "Laden..."
+  },
+  "panel_ui_activated": {
+    "message": "Geactiveerd:"
+  },
+  "panel_status_opening_google_sign_in": {
+    "message": "Google-inloggen openen..."
+  },
+  "panel_status_enter_your_code_first": {
+    "message": "Voer eerst je code in"
+  },
+  "panel_status_that_does_not_look_like_a": {
+    "message": "Dat lijkt geen PROMO-code."
+  },
+  "panel_status_redeeming": {
+    "message": "Bezig met inwisselen..."
+  },
+  "panel_status_could_not_reach_the_server_try": {
+    "message": "Kon de server niet bereiken. Probeer het opnieuw."
+  },
+  "panel_status_code_accepted_1_rounds_left": {
+    "message": "Code geaccepteerd. Nog $1 rondes over."
+  },
+  "panel_status_that_code_does_not_exist": {
+    "message": "Die code bestaat niet."
+  },
+  "panel_status_that_code_is_already_used_on": {
+    "message": "Die code is al op een ander apparaat gebruikt."
+  },
+  "panel_status_that_code_has_expired": {
+    "message": "Die code is verlopen."
+  },
+  "panel_status_too_many_tries_wait_an_hour": {
+    "message": "Te veel pogingen. Wacht een uur."
+  },
+  "panel_status_that_code_was_refused": {
+    "message": "Die code is geweigerd."
+  },
+  "panel_ui_renew_pro": {
+    "message": "Pro verlengen"
+  },
+  "panel_status_your_subscription_payment_is_past_due": {
+    "message": "Je abonnementsbetaling is achterstallig. Verleng je abonnement om premiumfuncties te blijven gebruiken."
+  },
+  "panel_status_this_feature_requires_premium_access_please": {
+    "message": "Deze functie vereist premiumtoegang. Upgrade of start een gratis proefperiode."
+  },
+  "panel_status_error_checking_subscription_status_please_try": {
+    "message": "Kon de abonnementsstatus niet controleren. Probeer het opnieuw."
+  },
+  "panel_ui_pro_mode_enabled": {
+    "message": "Pro-modus ingeschakeld"
+  },
+  "panel_notif_trial_expired": {
+    "message": "Proefperiode verlopen"
+  },
+  "panel_notif_your_free_trial_has_ended_upgrade": {
+    "message": "Je gratis proefperiode is voorbij. Upgrade om premiumfuncties te blijven gebruiken."
+  },
+  "panel_notif_upgrade_now": {
+    "message": "Nu upgraden"
+  },
+  "panel_notif_payment_failed": {
+    "message": "Betaling mislukt"
+  },
+  "panel_notif_your_payment_could_not_be_processed": {
+    "message": "Je betaling kon niet worden verwerkt. Probeer het opnieuw."
+  },
+  "panel_notif_retry_payment": {
+    "message": "Betaling opnieuw proberen"
+  },
+  "panel_notif_payment_past_due": {
+    "message": "Betaling achterstallig"
+  },
+  "panel_notif_your_subscription_payment_is_past_due": {
+    "message": "Je abonnementsbetaling is achterstallig. Werk je betaalmethode bij om premiumfuncties te blijven gebruiken."
+  },
+  "panel_notif_update_payment": {
+    "message": "Betaalmethode bijwerken"
+  },
+  "panel_notif_subscription_cancelled": {
+    "message": "Abonnement opgezegd"
+  },
+  "panel_notif_reactivate": {
+    "message": "Heractiveren"
+  },
+  "panel_notif_subscription_expired": {
+    "message": "Abonnement verlopen"
+  },
+  "panel_notif_your_subscription_has_expired_renew_to": {
+    "message": "Je abonnement is verlopen. Verleng het om premiumfuncties te blijven gebruiken."
+  },
+  "panel_notif_renew_now": {
+    "message": "Nu verlengen"
+  },
+  "panel_notif_payment_issues_detected": {
+    "message": "Betalingsproblemen gedetecteerd"
+  },
+  "panel_notif_multiple_payment_attempts_detected_please_contact": {
+    "message": "Meerdere betaalpogingen gedetecteerd. Neem contact op met support als het niet lukt."
+  },
+  "panel_notif_contact_support": {
+    "message": "Contact opnemen met support"
+  },
+  "panel_status_no_internet_connection_please_check_your": {
+    "message": "Geen internetverbinding. Controleer je netwerk en probeer het opnieuw."
+  },
+  "panel_status_payment_service_temporarily_unavailable_please_try": {
+    "message": "Betaaldienst tijdelijk niet beschikbaar. Probeer het later opnieuw."
+  },
+  "panel_status_sign_in_failed_please_try_again": {
+    "message": "Inloggen mislukt. Probeer het opnieuw."
+  },
+  "panel_profile_unavailable": {
+    "message": "Profiel niet beschikbaar"
+  },
+  "panel_profile_signed_out_hint": {
+    "message": "Log in bij GeoGuessr in je browser en druk daarna op Vernieuwen."
+  },
+  "panel_profile_open_tab_hint": {
+    "message": "Open een GeoGuessr-tabblad en druk daarna op Vernieuwen."
+  },
+  "panel_profile_reload_tab_hint": {
+    "message": "Herlaad je GeoGuessr-tabblad zodat het paneel het kan lezen, en druk daarna op Vernieuwen."
+  },
+  "panel_has_this_been_useful": {
+    "message": "Heb je hier iets aan gehad?"
+  },
+  "panel_a_short_review_on_the_store": {
+    "message": "Een korte review op de winkelpagina helpt andere spelers kiezen. Er hangt niets aan vast."
+  },
+  "panel_open_the_store": {
+    "message": "Open de winkel"
+  }
+}

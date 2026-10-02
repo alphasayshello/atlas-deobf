@@ -1,0 +1,140 @@
+{
+  "manifest_version": 3,
+  "name": "GeoGuesser Cheats (GeoGuesser Cheat / Hack)",
+  "short_name": "GeoGuesser",
+  "version": "1.6.5",
+  "default_locale": "en",
+  "minimum_chrome_version": "111",
+  "description": "__MSG_ext_desc_geoguessr_solver_and_cheat_side_panel__",
+  "permissions": [
+    "storage",
+    "sidePanel",
+    "scripting",
+    "alarms",
+    "identity"
+  ],
+  "host_permissions": [
+    "https://www.geoguessr.com/*",
+    "https://openguessr.com/*",
+    "https://www.openguessr.com/*",
+    "https://worldguessr.com/*",
+    "https://www.worldguessr.com/*",
+    "https://freeguessr.com/*",
+    "https://www.freeguessr.com/*",
+    "https://guesswhereyouare.com/*",
+    "https://www.guesswhereyouare.com/*",
+    "https://guesswhereyouare.info/*",
+    "https://geotastic.net/*",
+    "https://www.geotastic.net/*",
+    "https://hideandseek.world/*",
+    "https://www.hideandseek.world/*",
+    "https://geohub.gg/*",
+    "https://www.geohub.gg/*",
+    "https://mapcrunch.com/*",
+    "https://www.mapcrunch.com/*",
+    "https://panoguessr.com/*",
+    "https://www.panoguessr.com/*",
+    "https://mapiguesser.com/*",
+    "https://www.mapiguesser.com/*",
+    "https://geoguessrcheats.com/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; connect-src 'self' https://discord.com https://discordapp.com https://geoguessrcheats.com https://ynqcxfjxirfqmspfjrws.supabase.co; img-src 'self' data: https://www.geoguessr.com https://www.gravatar.com; object-src 'self'; frame-src 'none'"
+  },
+  "action": {
+    "default_title": "__MSG_ext_action_atlas_for_geoguessr__",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "side_panel": {
+    "default_path": "sidepanel/sidepanel.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.geoguessr.com/*",
+        "https://openguessr.com/*",
+        "https://www.openguessr.com/*",
+        "https://worldguessr.com/*",
+        "https://www.worldguessr.com/*",
+        "https://freeguessr.com/*",
+        "https://www.freeguessr.com/*",
+        "https://guesswhereyouare.com/*",
+        "https://www.guesswhereyouare.com/*",
+        "https://guesswhereyouare.info/*",
+        "https://geotastic.net/*",
+        "https://www.geotastic.net/*",
+        "https://hideandseek.world/*",
+        "https://www.hideandseek.world/*",
+        "https://geohub.gg/*",
+        "https://www.geohub.gg/*",
+        "https://mapcrunch.com/*",
+        "https://www.mapcrunch.com/*",
+        "https://panoguessr.com/*",
+        "https://www.panoguessr.com/*",
+        "https://mapiguesser.com/*",
+        "https://www.mapiguesser.com/*"
+      ],
+      "js": [
+        "round_extract.js",
+        "xhr_inject.js"
+      ],
+      "world": "MAIN",
+      "all_frames": true,
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://www.geoguessr.com/*",
+        "https://openguessr.com/*",
+        "https://www.openguessr.com/*",
+        "https://worldguessr.com/*",
+        "https://www.worldguessr.com/*",
+        "https://freeguessr.com/*",
+        "https://www.freeguessr.com/*",
+        "https://guesswhereyouare.com/*",
+        "https://www.guesswhereyouare.com/*",
+        "https://guesswhereyouare.info/*",
+        "https://geotastic.net/*",
+        "https://www.geotastic.net/*",
+        "https://hideandseek.world/*",
+        "https://www.hideandseek.world/*",
+        "https://geohub.gg/*",
+        "https://www.geohub.gg/*",
+        "https://mapcrunch.com/*",
+        "https://www.mapcrunch.com/*",
+        "https://panoguessr.com/*",
+        "https://www.panoguessr.com/*",
+        "https://mapiguesser.com/*",
+        "https://www.mapiguesser.com/*"
+      ],
+      "js": [
+        "geoguessr-content.js"
+      ],
+      "all_frames": true,
+      "run_at": "document_start"
+    }
+  ],
+  "commands": {
+    "trigger-guess": {
+      "suggested_key": {
+        "default": "Alt+G"
+      },
+      "description": "__MSG_ext_cmd_trigger_guess_in_the_atlas_side__"
+    }
+  },
+  "homepage_url": "https://geoguessrcheats.com"
+}

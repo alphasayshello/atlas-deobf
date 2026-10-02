@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title data-i18n="panel_atlas_for_geoguessr">Atlas for GeoGuessr</title>
+  <script src="theme-init.js"></script>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Left icon rail (desktop-style navigation) -->
+    <nav class="rail" aria-label="Sections" data-i18n-aria-label="panel_arialabel_sections">
+      <img src="../brand/logo.png" alt="Atlas" class="rail-logo" draggable="false" />
+      <div class="rail-nav">
+        <button class="rail-btn active" data-page="main" type="button" aria-label="Home" data-i18n-aria-label="panel_title_home" title="Home" data-i18n-title="panel_title_home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5"/><path d="M9.5 21v-6h5v6"/></svg>
+          <span class="rail-label" data-i18n="panel_title_home">Home</span>
+        </button>
+        <button class="rail-btn" data-page="stats" type="button" aria-label="Statistics" data-i18n-aria-label="panel_title_statistics" title="Statistics" data-i18n-title="panel_title_statistics">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-7"/><path d="M22 20H2"/></svg>
+          <span class="rail-label" data-i18n="panel_stats">Stats</span>
+        </button>
+        <button class="rail-btn" data-page="history" type="button" aria-label="History" data-i18n-aria-label="panel_title_history" title="History" data-i18n-title="panel_title_history">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v5h5"/><path d="M3.05 13A9 9 0 1 0 6 5.3L3 8"/><path d="M12 7v5l3 2"/></svg>
+          <span class="rail-label" data-i18n="panel_title_history">History</span>
+        </button>
+        <button class="rail-btn" data-page="plans" type="button" aria-label="Plans" data-i18n-aria-label="panel_arialabel_plans" title="Plans and pricing" data-i18n-title="panel_title_plans_and_pricing">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41 13.42 20.6a2 2 0 0 1-2.83 0L3 13V3h10l7.59 7.59a2 2 0 0 1 0 2.82z"/><circle cx="7" cy="7" r="1.4" fill="currentColor" stroke="none"/></svg>
+          <span class="rail-label" data-i18n="panel_arialabel_plans">Plans</span>
+        </button>
+        <!-- Learn tab disabled for now. Uncomment this button to re-enable it (the page and logic stay in place). -->
+        <!--
+        <button class="rail-btn" data-page="learn" type="button" aria-label="Learn" title="Learn to recognise countries">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H20v15H5.5A2.5 2.5 0 0 0 3 20.5z"/><path d="M3 20.5A2.5 2.5 0 0 1 5.5 18H20v3"/></svg>
+          <span class="rail-label">Learn</span>
+        </button>
+        -->
+        <button class="rail-btn" data-page="profile" type="button" aria-label="Profile" data-i18n-aria-label="panel_title_profile" title="Profile" data-i18n-title="panel_title_profile">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>
+          <span class="rail-label" data-i18n="panel_title_profile">Profile</span>
+        </button>
+        <button class="rail-btn" data-page="discord" type="button" aria-label="Discord" data-i18n-aria-label="panel_arialabel_discord" title="Discord notifications" data-i18n-title="panel_title_discord_notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          <span class="rail-label" data-i18n="panel_arialabel_discord">Discord</span>
+        </button>
+        <button class="rail-btn" data-page="account" type="button" aria-label="Account" data-i18n-aria-label="panel_arialabel_account" title="Account and license key" data-i18n-title="panel_title_account_and_license_key">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M10.85 12.15 19 4"/><path d="M18 5l2 2"/><path d="M15 8l2 2"/></svg>
+          <span class="rail-label" data-i18n="panel_arialabel_account">Account</span>
+        </button>
+        <button class="rail-btn" data-page="settings" type="button" aria-label="Settings" data-i18n-aria-label="panel_title_settings" title="Settings" data-i18n-title="panel_title_settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <span class="rail-label" data-i18n="panel_title_settings">Settings</span>
+        </button>
+      </div>
+      <div class="rail-bottom">
+        <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Toggle dark theme" data-i18n-aria-label="panel_arialabel_toggle_dark_theme" title="Toggle theme" data-i18n-title="panel_title_toggle_theme">
+          <span class="theme-toggle-icon theme-toggle-moon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+            </svg>
+          </span>
+          <span class="theme-toggle-knob"></span>
+          <span class="theme-toggle-icon theme-toggle-sun">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="pages">
+    <!-- Home Page -->
+    <div id="main-page" class="page active">
+      <div class="page-head">
+        <div class="brand">
+          <span class="status-dot" id="status-dot" aria-hidden="true"></span>
+          <h1 class="wordmark">ATLAS</h1>
+        </div>
+        <span class="plan-badge" id="plan-badge" data-i18n="panel_pro">Pro</span>
+      </div>
+      <div class="status-bar" id="status-bar" data-i18n="panel_waiting_to_start_task">Waiting to start task</div>
+
+      <div class="main-section">
+        <div id="location-area">
+          <div class="location-card">
+            <div class="location-header">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span data-i18n="panel_location">Location</span>
+            </div>
+            <div id="location-country" class="location-country"></div>
+            <div id="location-words" class="location-content"></div>
+          </div>
+        </div>
+
+        <!-- Map container (offline world map, marker plotted from coordinates) -->
+        <div id="map-container">
+          <div id="map-view" class="map-view">
+            <!-- Everything that must zoom together lives on the stage; #map-view
+                 stays put and clips. Scaling the stage about the target point
+                 keeps that point still, so there is no panning maths. -->
+            <div id="map-stage" class="map-stage">
+              <!-- The whole political map, drawn from brand/worldmap.json into
+                   this one SVG: every country as a filled path, the latitude
+                   lines a player orients by, and the country names. It used to
+                   be an <img> of brand/world.svg, a single silhouette path with
+                   no borders and no text, which is why zooming in showed an
+                   orange shape against a featureless grey blob.
+                   360x180 is lng+180 / 90-lat, so a ring needs no projection.
+                   The zoom is a CSS transform on #map-stage, an HTML ancestor of
+                   this SVG, so vector-effect: non-scaling-stroke cannot see it
+                   and every stroke width used to be multiplied by the zoom. The
+                   widths are custom properties now and _applyMapLabelScale
+                   divides them by the zoom, the same way it already sized the
+                   labels. It used to carry vector-effect="non-scaling-stroke"
+                   here as well, which never did anything: the attribute applies
+                   to the element it is on, it is not an inherited property, and
+                   this element is not a shape. -->
+              <svg id="map-outline" class="map-outline" viewBox="0 0 360 180"
+                   preserveAspectRatio="none" aria-hidden="true" style="display:none"></svg>
+              <div id="map-marker" class="map-marker" aria-hidden="true">
+                <span class="map-marker-pulse"></span>
+                <span class="map-marker-dot"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GUESS button, below the map -->
+        <div class="button-group">
+          <button id="capture-button" class="action-button">
+            <svg id="camera-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M20 4h-3.17l-1.24-1.35A2 2 0 0 0 14.12 2H9.88a2 2 0 0 0-1.47.65L7.17 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/>
+            </svg>
+            <div id="loading-spinner" class="loading-spinner"></div>
+            <span id="button-text" data-i18n="panel_guess">GUESS</span>
+          </button>
+        </div>
+
+        <!-- Coordinates area -->
+        <div id="coords-area">
+          <div class="coords-card">
+            <div class="coords-header">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              <span data-i18n="panel_coordinates">Coordinates</span>
+            </div>
+            <div id="coords" class="coords-content"></div>
+          </div>
+        </div>
+
+        <!-- Review ask. A card, never a modal: an interruption during play is
+             what turns a review request into a one star. Shown at most twice, and
+             only to a key that is linked to an account, because the review form on
+             the site requires that account and would answer 403 otherwise. -->
+        <div class="card review-ask" id="review-ask" hidden>
+          <div class="card-hdr" data-i18n="panel_review">REVIEW</div>
+          <div class="review-ask-body">
+            <p class="review-ask-lead" data-i18n="panel_would_you_tell_someone_what_this">Would you tell someone what this is like?</p>
+            <p class="review-ask-text" data-i18n="panel_reviews_are_how_most_people_decide">Reviews are how most people decide whether to trust this. A few lines is worth more than a score.</p>
+            <p class="review-ask-text" data-i18n="panel_not_sure_what_to_write_any">Not sure what to write? Any one of these is plenty:</p>
+            <ul class="review-ask-prompts">
+              <li data-i18n="panel_which_round_made_you_think_it">Which round made you think it actually works?</li>
+              <li data-i18n="panel_what_were_you_doing_before_you">What were you doing before you found this?</li>
+              <li data-i18n="panel_which_game_do_you_play_it">Which game do you play it on most?</li>
+            </ul>
+            <p class="review-ask-reward" data-i18n="panel_your_review_earns_you_7_extra">Your review earns you 7 extra days once it is approved.</p>
+            <div class="review-ask-actions">
+              <button id="review-ask-go" class="review-ask-primary" type="button" data-i18n="panel_write_a_review">Write a review</button>
+              <button id="review-ask-later" class="review-ask-ghost" type="button" data-i18n="panel_maybe_later">Maybe later</button>
+              <button id="review-ask-never" class="review-ask-ghost" type="button" data-i18n="panel_do_not_ask_again">Do not ask again</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div class="link-row">
+          <a href="https://discord.gg/zwYXRgRRHc" target="_blank" rel="noopener" class="link-btn" title="Join our Discord" data-i18n-title="panel_title_join_our_discord">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.03.052a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+            </svg>
+            <span data-i18n="panel_arialabel_discord">Discord</span>
+          </a>
+          <a href="https://geoguessrcheats.com" target="_blank" rel="noopener" class="link-btn" title="Open the website" data-i18n-title="panel_title_open_the_website">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <span data-i18n="panel_website">Website</span>
+          </a>
+          <a href="https://geoguessrcheats.com/plans" target="_blank" rel="noopener" class="link-btn" title="Buy a key" data-i18n-title="panel_title_buy_a_key">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1.6"/>
+              <circle cx="19" cy="21" r="1.6"/>
+              <path d="M2.5 3h2l2.4 12.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L22 7H6"/>
+            </svg>
+            <span data-i18n="panel_buy">Buy</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Statistics Page -->
+    <div id="stats-page" class="page">
+      <div class="page-head">
+        <h1 class="page-title" data-i18n="panel_statistics">STATISTICS</h1>
+        <button id="stats-refresh" class="btn-secondary" type="button" data-i18n="panel_refresh">Refresh</button>
+      </div>
+      <div class="stat-grid" id="stat-grid"></div>
+      <div class="card">
+        <div class="card-hdr" data-i18n="panel_guess_map">GUESS MAP</div>
+        <div id="stats-map" class="map-view stats-map">
+          <!-- Same basemap as the guess panel, minus the labels: the heat dots
+               are the subject here. Drawn from brand/worldmap.json by
+               drawStatsBasemap(), which is why there is no <img> left. -->
+          <svg id="stats-basemap" class="map-outline" viewBox="0 0 360 180"
+               preserveAspectRatio="none" aria-hidden="true"></svg>
+          <div id="stats-heat" class="stats-heat" aria-hidden="true"></div>
+        </div>
+      </div>
+      <button id="stats-clear" class="btn-danger" type="button" data-i18n="panel_clear_all_history">Clear All History</button>
+    </div>
+
+    <!-- Game History Page -->
+    <div id="history-page" class="page">
+      <div class="page-head">
+        <h1 class="page-title" data-i18n="panel_game_history">GAME HISTORY</h1>
+        <button id="history-refresh" class="btn-secondary" type="button" data-i18n="panel_refresh">Refresh</button>
+      </div>
+      <div class="card">
+        <div class="card-hdr" data-i18n="panel_recent_guesses">RECENT GUESSES <span class="card-sub" id="history-count"></span></div>
+        <div class="table-wrap">
+          <table class="data-table" id="history-table">
+            <thead>
+              <tr><th data-i18n="panel_location">Location</th><th data-i18n="panel_country">Country</th><th data-i18n="panel_coordinates">Coordinates</th><th data-i18n="panel_when">When</th></tr>
+            </thead>
+            <tbody id="history-body"></tbody>
+          </table>
+        </div>
+        <div id="history-empty" class="empty-note" data-i18n="panel_no_guesses_yet_press_guess_during">No guesses yet. Press GUESS during a round to start logging.</div>
+      </div>
+    </div>
+
+    <!-- Learn Page -->
+    <div id="learn-page" class="page">
+      <div class="page-head">
+        <h1 class="page-title">LEARN</h1>
+        <div class="seg" id="learn-mode">
+          <button class="seg-btn active" data-mode="guide" type="button">Guide</button>
+          <button class="seg-btn" data-mode="practice" type="button">Practice</button>
+        </div>
+      </div>
+
+      <div id="learn-guide">
+        <div class="card">
+          <div class="card-hdr">QUICK ID FLOW</div>
+          <ol id="learn-quickid" class="quick-flow"></ol>
+        </div>
+        <div class="card">
+          <div class="card-hdr">CLUE CATEGORIES</div>
+          <div id="learn-cats" class="learn-grid"></div>
+        </div>
+        <div class="card">
+          <div class="card-hdr">TELL NEIGHBOURS APART</div>
+          <div id="learn-clusters" class="learn-list"></div>
+        </div>
+        <div class="card" id="learn-seen-card">
+          <div class="card-hdr">COUNTRIES YOU HAVE SEEN</div>
+          <div id="learn-seen" class="learn-list"></div>
+        </div>
+        <div class="card">
+          <div class="card-hdr">FURTHER READING</div>
+          <div id="learn-resources" class="learn-links"></div>
+        </div>
+      </div>
+
+      <div id="learn-detail" class="learn-detail" style="display:none">
+        <button id="learn-back" class="btn-secondary learn-back" type="button">Back</button>
+        <div id="learn-detail-body"></div>
+      </div>
+
+      <div id="learn-practice" style="display:none">
+        <div class="card">
+          <div class="card-hdr">PRACTICE <span class="card-sub" id="quiz-score"></span></div>
+          <div id="quiz-clue" class="quiz-clue"></div>
+          <div id="quiz-options" class="quiz-options"></div>
+          <div id="quiz-feedback" class="quiz-feedback"></div>
+          <button id="quiz-next" class="btn-secondary quiz-next" type="button" style="display:none">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Profile Page -->
+    <div id="profile-page" class="page">
+      <div class="page-head">
+        <h1 class="page-title" data-i18n="panel_my_profile">MY PROFILE</h1>
+        <button id="profile-refresh" class="btn-secondary" type="button" data-i18n="panel_refresh">Refresh</button>
+      </div>
+      <div class="card">
+        <div class="profile-head">
+          <div id="profile-avatar" class="profile-avatar" aria-hidden="true">?</div>
+          <div class="profile-id">
+            <div id="profile-name" class="profile-name" data-i18n="panel_not_signed_in">Not signed in</div>
+            <div id="profile-sub" class="profile-sub" data-i18n="panel_open_geoguessr_and_sign_in_then">Open GeoGuessr and sign in, then Refresh</div>
+          </div>
+        </div>
+      </div>
+      <div class="stat-grid" id="profile-stats"></div>
+      <div id="profile-empty" class="empty-note" data-i18n="panel_open_a_geoguessr_tab_sign_in">Open a GeoGuessr tab, sign in, and press Refresh to load your profile.</div>
+    </div>
+
+    <!-- Plans Page (mirrors geoguessrcheats.com/plans exactly) -->
+    <div id="plans-page" class="page">
+      <div class="page-head">
+        <h1 class="page-title" data-i18n="panel_plans">PLANS</h1>
+      </div>
+      <p class="plans-trial"><span data-i18n="panel_new_here_you_get">New here? You get</span> <strong data-i18n="panel_7_free_rounds">7 free rounds</strong> <span data-i18n="panel_in_your_browser_no_download_and">in your browser, no download and no account. See a fast, accurate guess before you pay a cent.</span></p>
+
+      <!-- Same offer as the Plans hero on geoguessrcheats.com, so the mirror
+           this page promises in the comment above stays true. -->
+      <a class="atl-dc" href="https://discord.gg/zwYXRgRRHc" target="_blank" rel="noopener">
+        <svg class="atl-dc-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.03.052a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+        <span class="atl-dc-text">
+          <span class="atl-dc-title" data-i18n="panel_15_free_rounds_in_the_discord">15 free rounds in the Discord</span>
+          <span class="atl-dc-line" data-i18n="panel_join_pick_geoguessr_and_your_code">Join, pick GeoGuessr, and your code arrives by direct message.</span>
+        </span>
+        <span class="atl-dc-go" data-i18n="panel_join">Join</span>
+      </a>
+
+      <div class="plans-list">
+
+        <div class="plan-card">
+          <div class="plan-name" data-i18n="panel_pro">Pro</div>
+          <div class="plan-price"><sup>&euro;</sup>14<span class="plan-dec">.99</span></div>
+          <div class="plan-period" data-i18n="panel_per_month">per month</div>
+          <ul class="plan-feats">
+            <li data-i18n="panel_unlimited_rounds">Unlimited rounds</li>
+            <li data-i18n="panel_classic_duels_team_duels">Classic, Duels &amp; Team Duels</li>
+            <li data-i18n="panel_discord_integration">Discord integration</li>
+            <li data-i18n="panel_autoplay_mode">Autoplay mode</li>
+            <li data-i18n="panel_browser_extension_windows_app">Browser extension + Windows app</li>
+          </ul>
+          <a class="plan-cta plan-cta-ghost" href="https://geoguessrcheats.com/?page=plans&amp;plan=Pro" target="_blank" rel="noopener" data-i18n="panel_choose_pro">Choose Pro</a>
+        </div>
+
+        <div class="plan-card plan-popular">
+          <div class="plan-tag" data-i18n="panel_best_deal">Best deal</div>
+          <div class="plan-name" data-i18n="panel_yearly">Yearly</div>
+          <div class="plan-price"><sup>&euro;</sup>33<span class="plan-dec">.50</span></div>
+          <div class="plan-period" data-i18n="panel_per_year">per year</div>
+          <div class="plan-save"><span class="plan-was" data-i18n="panel_179_88_normally">&euro;179.88 normally</span><span class="plan-save-badge" data-i18n="panel_save_146">SAVE &euro;146</span></div>
+          <ul class="plan-feats">
+            <li data-i18n="panel_everything_in_pro">Everything in Pro</li>
+            <li data-i18n="panel_no_machine_lock">No machine lock</li>
+            <li data-i18n="panel_dedicated_discord_support">Dedicated Discord support</li>
+            <li data-i18n="panel_roadmap_priority_votes">Roadmap priority votes</li>
+            <li data-i18n="panel_annual_billing_cycle">Annual billing cycle</li>
+          </ul>
+          <a class="plan-cta plan-cta-primary" href="https://geoguessrcheats.com/?page=plans&amp;plan=Yearly" target="_blank" rel="noopener" data-i18n="panel_choose_yearly">Choose Yearly</a>
+        </div>
+
+        <div class="plan-card">
+          <div class="plan-name" data-i18n="panel_lifetime">Lifetime</div>
+          <div class="plan-price"><sup>&euro;</sup>50<span class="plan-dec">.00</span></div>
+          <div class="plan-period" data-i18n="panel_one_time">one-time</div>
+          <ul class="plan-feats">
+            <li data-i18n="panel_full_access">Full access</li>
+            <li data-i18n="panel_browser_extension_windows_app">Browser extension + Windows app</li>
+            <li data-i18n="panel_early_access_to_new_features">Early access to new features</li>
+            <li data-i18n="panel_support_development_team">Support development team</li>
+            <li data-i18n="panel_roadmap_participation">Roadmap participation</li>
+          </ul>
+          <a class="plan-cta plan-cta-ghost" href="https://geoguessrcheats.com/?page=plans&amp;plan=Lifetime" target="_blank" rel="noopener" data-i18n="panel_choose_lifetime">Choose Lifetime</a>
+        </div>
+
+      </div>
+
+      <div class="plans-assurance">
+        <span data-i18n="panel_one_time_payment">One time payment</span>
+        <span data-i18n="panel_no_auto_renewal">No auto renewal</span>
+        <span data-i18n="panel_instant_email_delivery">Instant email delivery</span>
+      </div>
+      <p class="plans-pay"><span data-i18n="panel_pay_with">Pay with</span> <strong data-i18n="panel_crypto_gift_cards_cs2_skins">crypto, gift cards, CS2 skins</strong> <span data-i18n="panel_and_more">and more.</span></p>
+    </div>
+
+    <!-- Discord Page -->
+    <div id="discord-page" class="page">
+      <div class="page-head">
+        <h1 class="page-title" data-i18n="panel_discord">DISCORD</h1>
+      </div>
+      <div class="card">
+        <div class="card-hdr" data-i18n="panel_webhook">WEBHOOK</div>
+        <div class="field-row">
+          <input id="discord-webhook" class="field-input" type="password" placeholder="https://discord.com/api/webhooks/..." autocomplete="off" spellcheck="false" />
+          <button id="discord-show" class="btn-secondary" type="button" data-i18n="panel_show">Show</button>
+        </div>
+        <div class="btn-row">
+          <button id="discord-save" class="btn-secondary" type="button" data-i18n="panel_save">Save</button>
+          <button id="discord-test" class="btn-secondary" type="button" data-i18n="panel_send_test">Send test</button>
+        </div>
+        <div id="discord-status" class="field-status" data-i18n="panel_not_connected">Not connected</div>
+      </div>
+      <div class="card">
+        <div class="card-hdr" data-i18n="panel_notifications">NOTIFICATIONS</div>
+        <div class="toggle-row">
+          <div class="toggle-info"><span class="toggle-label" data-i18n="panel_send_a_message_on_each_guess">Send a message on each guess</span></div>
+          <label class="toggle-switch"><input type="checkbox" id="discord-notify-guess"><span class="toggle-track"></span></label>
+        </div>
+        <div class="toggle-row">
+          <div class="toggle-info"><span class="toggle-label" data-i18n="panel_include_coordinates">Include coordinates</span></div>
+          <label class="toggle-switch"><input type="checkbox" id="discord-incl-coords" checked><span class="toggle-track"></span></label>
+        </div>
+        <div class="toggle-row">
+          <div class="toggle-info"><span class="toggle-label" data-i18n="panel_include_country">Include country</span></div>
+          <label class="toggle-switch"><input type="checkbox" id="discord-incl-country" checked><span class="toggle-track"></span></label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Settings Page -->
+    <div id="settings-page" class="page">
+      <div class="page-head">
+        <h1 class="page-title" data-i18n="panel_settings">SETTINGS</h1>
+      </div>
+
+      <div class="settings-section appearance-card">
+        <div class="card-hdr" data-i18n="panel_appearance">APPEARANCE</div>
+        <div class="field-row">
+          <span class="toggle-label field-label" data-i18n="panel_preset">Preset</span>
+          <select id="theme-preset" class="field-input theme-preset-select">
+            <option value="" data-i18n="panel_default_light_dark">Default (Light/Dark)</option>
+            <option value="Ocean" data-i18n="panel_ocean">Ocean</option>
+            <option value="Forest" data-i18n="panel_forest">Forest</option>
+            <option value="Sunset" data-i18n="panel_sunset">Sunset</option>
+            <option value="Cyberpunk" data-i18n="panel_cyberpunk">Cyberpunk</option>
+            <option value="Nord" data-i18n="panel_nord">Nord</option>
+            <option value="Dracula" data-i18n="panel_dracula">Dracula</option>
+            <option value="Midnight Gold" data-i18n="panel_midnight_gold">Midnight Gold</option>
+            <option value="Emerald" data-i18n="panel_emerald">Emerald</option>
+            <option value="Cherry Blossom" data-i18n="panel_cherry_blossom">Cherry Blossom</option>
+            <option value="Lavender" data-i18n="panel_lavender">Lavender</option>
+          </select>
+        </div>
+        <div class="setting-line">
+          <span class="toggle-label field-label" data-i18n="panel_density">Density</span>
+          <div class="seg" id="seg-density">
+            <button class="seg-btn active" data-density="comfortable" type="button" data-i18n="panel_comfortable">Comfortable</button>
+            <button class="seg-btn" data-density="compact" type="button" data-i18n="panel_compact">Compact</button>
+          </div>
+        </div>
+        <div class="setting-line">
+          <span class="toggle-label field-label" data-i18n="panel_text_size">Text size</span>
+          <div class="seg" id="seg-textsize">
+            <button class="seg-btn" data-size="small" type="button">S</button>
+            <button class="seg-btn active" data-size="normal" type="button">M</button>
+            <button class="seg-btn" data-size="large" type="button">L</button>
+          </div>
+        </div>
+        <div class="setting-line">
+          <span class="toggle-label field-label" data-i18n="panel_arialabel_accent_color">Accent color</span>
+          <div class="accent-row">
+            <input type="color" id="accent-color" class="accent-input" value="#FF6600" aria-label="Accent color" data-i18n-aria-label="panel_arialabel_accent_color" />
+            <button id="accent-reset" class="btn-secondary" type="button" data-i18n="panel_reset">Reset</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="settings-content">
+        <!-- Coordinates -->
+        <div class="settings-section">
+          <div class="card-hdr" data-i18n="panel_coordinates_2">COORDINATES</div>
+          <div class="setting-line">
+            <span class="toggle-label field-label" data-i18n="panel_format">Format</span>
+            <div class="seg" id="seg-coordfmt">
+              <button class="seg-btn active" data-fmt="decimal" type="button" data-i18n="panel_decimal">Decimal</button>
+              <button class="seg-btn" data-fmt="dms" type="button" data-i18n="panel_dms">DMS</button>
+            </div>
+          </div>
+          <div class="setting-line">
+            <span class="toggle-label field-label" data-i18n="panel_decimals">Decimals</span>
+            <div class="seg" id="seg-precision">
+              <button class="seg-btn" data-prec="3" type="button">3</button>
+              <button class="seg-btn active" data-prec="5" type="button">5</button>
+              <button class="seg-btn" data-prec="6" type="button">6</button>
+            </div>
+          </div>
+          <div class="toggle-row">
+            <div class="toggle-info"><span class="toggle-label" data-i18n="panel_copy_coordinates_on_each_guess">Copy coordinates on each guess</span></div>
+            <label class="toggle-switch"><input type="checkbox" id="auto-copy-toggle"><span class="toggle-track"></span></label>
+          </div>
+        </div>
+
+        <!-- Access -->
+        <div class="settings-section">
+          <div class="card-hdr" data-i18n="panel_access">ACCESS</div>
+          <div class="toggle-row">
+            <div class="toggle-info"><span class="toggle-label" data-i18n="panel_quick_open_button_on_the_game">Quick-open button on the game page</span></div>
+            <label class="toggle-switch"><input type="checkbox" id="launcher-toggle"><span class="toggle-track"></span></label>
+          </div>
+          <div class="toggle-row">
+            <div class="toggle-info"><span class="toggle-label" data-i18n="panel_enable_on_geoguessr">Enable on GeoGuessr</span></div>
+            <label class="toggle-switch"><input type="checkbox" id="platform-gg" checked><span class="toggle-track"></span></label>
+          </div>
+          <div class="toggle-row">
+            <div class="toggle-info"><span class="toggle-label" data-i18n="panel_enable_on_openguessr">Enable on OpenGuessr</span></div>
+            <label class="toggle-switch"><input type="checkbox" id="platform-og" checked><span class="toggle-track"></span></label>
+          </div>
+          <div class="setting-line">
+            <span class="toggle-label field-label" data-i18n="panel_guess_shortcut">GUESS shortcut</span>
+            <button id="shortcut-btn" class="btn-secondary" type="button" data-i18n="panel_set_in_browser">Set in browser</button>
+          </div>
+        </div>
+
+        <!-- Data and privacy -->
+        <div class="settings-section">
+          <div class="card-hdr" data-i18n="panel_data_and_privacy">DATA AND PRIVACY</div>
+          <div class="toggle-row">
+            <div class="toggle-info"><span class="toggle-label" data-i18n="panel_log_guesses_stats_and_history">Log guesses (Stats and History)</span></div>
+            <label class="toggle-switch"><input type="checkbox" id="history-toggle" checked><span class="toggle-track"></span></label>
+          </div>
+          <!-- The dashboard character. Its own switch rather than a second thing
+               hidden under "Share anonymous gameplay stats", because the outfit is
+               tied to the account and that label would not cover it. Wording and
+               default match the Windows app, which got the same switch. -->
+          <div class="toggle-row">
+            <div class="toggle-info"><span class="toggle-label" data-i18n="panel_show_my_geoguessr_character_on_the">Show my GeoGuessr character on the website dashboard</span></div>
+            <label class="toggle-switch"><input type="checkbox" id="avatar-sync-toggle" checked><span class="toggle-track"></span></label>
+          </div>
+          <div class="setting-note" data-i18n="panel_reads_the_items_your_character_wears">Reads the items your character wears, nothing else. You can remove the character from the dashboard at any time.</div>
+          <div class="setting-line">
+            <span class="toggle-label field-label" data-i18n="panel_keep">Keep</span>
+            <div class="seg" id="seg-retention">
+              <button class="seg-btn" data-keep="50" type="button">50</button>
+              <button class="seg-btn active" data-keep="200" type="button">200</button>
+              <button class="seg-btn" data-keep="1000" type="button" data-i18n="panel_all">All</button>
+            </div>
+          </div>
+          <div class="btn-row">
+            <button id="export-json" class="btn-secondary" type="button" data-i18n="panel_export_json">Export JSON</button>
+            <button id="export-csv" class="btn-secondary" type="button" data-i18n="panel_export_csv">Export CSV</button>
+          </div>
+          <button id="clear-data" class="btn-danger data-clear-btn" type="button" data-i18n="panel_clear_all_data">Clear all data</button>
+        </div>
+
+        <!-- Guess map. Map Zoom lived inside the AUTO PLACE card until a
+             customer asked for it here, on the grounds that the zoom still
+             applied to someone placing their own pin. It does not, and never
+             did: performAutoPlace returns at its first line when Auto Place is
+             off, and that function is the only reader of mapZoomLevel. So the
+             card stays where the customer wanted it, and the control is dimmed
+             and disabled while the thing it depends on is switched off, rather
+             than sitting there looking live and doing nothing. -->
+        <div class="settings-section" id="guess-map-section">
+          <div class="card-hdr" data-i18n="panel_guess_map">GUESS MAP</div>
+          <div class="zoom-row">
+            <div class="score-target-row">
+              <span class="score-target-label" data-i18n="panel_map_zoom">Map Zoom <span class="tooltip-icon" data-tooltip="How far the guess map zooms in after the pin is placed, so you can see where in the country it landed. Country = wide overview, Street = very close." data-i18n-tooltip="panel_datatooltip_how_far_the_guess_map_zooms">?</span></span>
+              <span class="score-target-value" id="map-zoom-value" data-i18n="panel_region">Region</span>
+            </div>
+            <input type="range" id="map-zoom-slider" min="3" max="16" step="1" value="6" class="zoom-slider">
+          </div>
+        </div>
+
+        <!-- Auto Behavior -->
+        <div class="settings-section auto-behavior-card">
+          <div class="card-hdr" data-i18n="panel_auto_place">AUTO PLACE</div>
+          <div class="toggle-row">
+            <div class="toggle-info">
+              <span class="toggle-label" data-i18n="panel_auto_place_2">Auto Place <span class="tooltip-icon" data-tooltip="Places pin on map automatically after coordinates are found." data-i18n-tooltip="panel_datatooltip_places_pin_on_map_automatically_after">?</span></span>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="auto-place-toggle" checked>
+              <span class="toggle-track"></span>
+            </label>
+          </div>
+          <div class="score-target-section" id="score-target-section">
+            <div class="toggle-row">
+              <div class="toggle-info">
+                <span class="toggle-label" data-i18n="panel_smart_zoom">Smart Zoom <span class="tooltip-icon" data-tooltip="Before placing the pin, the map naturally pans through nearby regions and zooms in, mimicking how a real player explores. Adds an extra layer of legitimacy." data-i18n-tooltip="panel_datatooltip_before_placing_the_pin_the_map">?</span></span>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" id="smart-zoom-toggle">
+                <span class="toggle-track"></span>
+              </label>
+            </div>
+            <!-- speed buttons hidden for now, uncomment to restore Fast/Slow toggle
+            <div id="smart-zoom-speed-area" class="smart-zoom-speed-area hidden">
+              <div class="speed-buttons">
+                <button class="speed-btn active" id="smart-zoom-fast-btn"><span>Fast</span></button>
+                <button class="speed-btn" id="smart-zoom-slow-btn"><span>Slow</span></button>
+              </div>
+            </div>
+            -->
+            <div class="toggle-row">
+              <div class="toggle-info">
+                <span class="toggle-label" data-i18n="panel_range">Range <span class="tooltip-icon" data-tooltip="Randomizes placement within a radius based on score range. Helps avoid detection in fast-paced rounds." data-i18n-tooltip="panel_datatooltip_randomizes_placement_within_a_radius_based">?</span></span>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" id="range-toggle">
+                <span class="toggle-track"></span>
+              </label>
+            </div>
+            <div id="range-slider-area" class="range-slider-area hidden">
+              <div class="score-target-row">
+                <span class="score-target-label" id="score-target-label" data-i18n="panel_exact_placement">Exact placement</span>
+                <span class="score-target-value" id="score-target-value" data-i18n="panel_5000_pts">5000 pts</span>
+              </div>
+              <div class="dual-range-container">
+                <div class="dual-range-track-fill" id="dual-range-fill"></div>
+                <input type="range" id="score-min-slider" min="0" max="5000" step="50" value="5000" class="score-slider score-slider-min">
+                <input type="range" id="score-max-slider" min="0" max="5000" step="50" value="5000" class="score-slider score-slider-max">
+              </div>
+              <div class="score-slider-ticks">
+                <span>0</span>
+                <span>2500</span>
+                <span>5000</span>
+              </div>
+            </div>
+            <div class="toggle-row">
+              <div class="toggle-info">
+                <span class="toggle-label" data-i18n="panel_auto_submit">Auto Submit <span class="tooltip-icon" data-tooltip="Fully hands-free: after the pin drops it clicks GUESS and moves to the next round, all game long. Pro only. Use at your own risk, automating play may violate GeoGuessr's terms." data-i18n-tooltip="panel_datatooltip_fully_hands_free_after_the_pin">?</span></span>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" id="auto-submit-toggle">
+                <span class="toggle-track"></span>
+              </label>
+            </div>
+            <div class="toggle-row">
+              <div class="toggle-info">
+                <span class="toggle-label" data-i18n="panel_guess_delay">Guess Delay <span class="tooltip-icon" data-tooltip="Waits a random time within this range after the round starts before guessing, so it looks more natural." data-i18n-tooltip="panel_datatooltip_waits_a_random_time_within_this">?</span></span>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" id="guess-delay-toggle">
+                <span class="toggle-track"></span>
+              </label>
+            </div>
+            <div id="guess-delay-area" class="range-slider-area hidden">
+              <div class="score-target-row">
+                <span class="score-target-label" id="guess-delay-label" data-i18n="panel_guess_delay_2">Guess delay</span>
+                <span class="score-target-value" id="guess-delay-value" data-i18n="panel_2_to_5_s">2 to 5 s</span>
+              </div>
+              <div class="dual-range-container">
+                <div class="dual-range-track-fill" id="guess-delay-fill"></div>
+                <input type="range" id="guess-delay-min-slider" min="0" max="20" step="0.5" value="2" class="score-slider score-slider-min">
+                <input type="range" id="guess-delay-max-slider" min="0" max="20" step="0.5" value="5" class="score-slider score-slider-max">
+              </div>
+              <div class="score-slider-ticks">
+                <span>0s</span>
+                <span>10s</span>
+                <span>20s</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Account Page: plan status + license key -->
+    <div id="account-page" class="page">
+      <div class="page-head"><h1 class="page-title" data-i18n="panel_account">ACCOUNT</h1></div>
+
+        <div class="payment-section">
+          <div class="upgrade-card">
+            <div class="upgrade-header">
+              <!-- <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="upgrade-icon">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg> -->
+              <h3 data-i18n="panel_upgrade_to_pro">Upgrade to Pro</h3>
+            </div>
+            <button id="payment-button" class="payment-button" data-i18n="panel_upgrade">
+              Upgrade
+            </button>
+
+            <!-- Auth Buttons for unauthenticated state - replaces single button -->
+            <div id="auth-buttons-container" class="auth-buttons-container" style="display: none;">
+              <button id="signup-settings-button" class="signup-settings-button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="8.5" cy="7" r="4"/>
+                  <line x1="20" y1="8" x2="20" y2="14"/>
+                  <line x1="23" y1="11" x2="17" y2="11"/>
+                </svg>
+                <span data-i18n="panel_sign_up">Sign Up</span>
+              </button>
+              <button id="login-settings-button" class="login-settings-button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+                  <polyline points="10,17 15,12 10,7"/>
+                  <line x1="15" y1="12" x2="3" y2="12"/>
+                </svg>
+                <span data-i18n="panel_log_in">Log In</span>
+              </button>
+            </div>
+          </div>
+            <button id="signin-button" class="signin-button-main" style="display: none;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 12l2 2 4-4"/>
+                <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c2.22 0 4.31.74 6 2"/>
+              </svg>
+              <span data-i18n="panel_sign_in_for_free_mode">Sign In for Free Mode</span>
+            </button>
+        </div>
+
+        <div id="usage-section" class="settings-section account-card">
+          <div class="card-hdr" data-i18n="panel_account_license">ACCOUNT &amp; LICENSE</div>
+
+          <!-- Plan status band -->
+          <div class="acct-plan">
+            <div class="acct-plan-main">
+              <span class="usage-mode-badge" id="usage-mode-badge" data-i18n="panel_free_mode">Free Mode</span>
+              <span class="usage-compact-value" id="usage-summary">0/7</span>
+            </div>
+            <div class="usage-progress" aria-hidden="true">
+              <div class="usage-progress-fill" id="usage-progress-fill"></div>
+            </div>
+          </div>
+
+          <!-- Signed-in identity (populated by JS, hidden until signed in) -->
+          <div id="account-identity" class="acct-identity" style="display:none;">
+            <span class="acct-avatar" id="account-avatar" aria-hidden="true">A</span>
+            <div class="acct-identity-info">
+              <span class="acct-identity-email" id="account-identity-email"></span>
+              <span class="acct-identity-sub" id="account-identity-sub" data-i18n="panel_signed_in_with_google">Signed in with Google</span>
+            </div>
+            <svg class="acct-identity-check" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#16a34a"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+
+          <!-- License key -->
+          <div class="acct-field-label" data-i18n="panel_license_key">License key</div>
+          <div id="key-display" class="acct-key-display" style="display:none;">
+            <span class="acct-key-text" id="acct-key-text"></span>
+            <button id="acct-key-copy" class="acct-key-copy" type="button" aria-label="Copy key" data-i18n-aria-label="panel_title_copy_key" title="Copy key" data-i18n-title="panel_title_copy_key">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </button>
+          </div>
+          <div class="field-row key-activate-row">
+            <input id="key-input" class="field-input" type="text" placeholder="Paste your ATLAS-XXXXX key" data-i18n-placeholder="panel_placeholder_paste_your_atlas_xxxxx_key" autocomplete="off" spellcheck="false" />
+            <button id="key-activate-btn" class="btn-secondary" type="button" data-i18n="panel_activate">Activate</button>
+          </div>
+          <div class="acct-key-actions">
+            <button id="change-key-btn" class="acct-linkbtn" type="button" data-i18n="panel_change_key">Change key</button>
+          </div>
+          <div id="key-status" class="field-status"></div>
+
+          <!-- Discord promo code. A separate field on purpose: it takes
+               PROMO-XXXXX-XXXXX and grants free rounds, where the field above
+               takes a four-group ATLAS key and grants a plan. Neither may ever
+               accept the other. -->
+          <div class="acct-field-label" data-i18n="panel_redeem_a_code">Redeem a code</div>
+          <div class="field-row code-redeem-row">
+            <input id="promo-input" class="field-input" type="text" placeholder="Paste your PROMO-XXXXX code" data-i18n-placeholder="panel_placeholder_paste_your_promo_xxxxx_code" autocomplete="off" spellcheck="false" />
+            <button id="promo-redeem-btn" class="btn-secondary" type="button" data-i18n="panel_redeem">Redeem</button>
+          </div>
+          <div id="promo-status" class="field-status"></div>
+
+          <!-- Where a code comes from. The field above has accepted PROMO codes
+               since 1.6.0 and nothing in the panel said where one is issued, so
+               a user staring at it had no way to learn the Discord exists.
+               Two steps on purpose: joining alone has earned nothing since
+               2026-09-02, the code is granted by picking GeoGuessr in the
+               product panel (discord-bot/bot.py on_member_join). Hidden for a
+               paying customer by _applyAccountLayout, who has no free rounds to
+               win. -->
+          <a id="promo-discord" class="atl-dc" href="https://discord.gg/zwYXRgRRHc" target="_blank" rel="noopener">
+            <svg class="atl-dc-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.03.052a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+            </svg>
+            <span class="atl-dc-text">
+              <span class="atl-dc-title" data-i18n="panel_15_free_rounds_in_the_discord">15 free rounds in the Discord</span>
+              <span class="atl-dc-line" data-i18n="panel_join_pick_geoguessr_and_your_code">Join, pick GeoGuessr, and your code arrives by direct message.</span>
+            </span>
+            <span class="atl-dc-go" data-i18n="panel_join">Join</span>
+          </a>
+
+          <!-- Google account (hidden once signed in) -->
+          <div id="google-signin-row" class="acct-google-row">
+            <div class="acct-divider"><span data-i18n="panel_or">or</span></div>
+            <button id="google-signin-btn" class="acct-google-btn" type="button">
+              <svg class="acct-google-g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7A21.99 21.99 0 0 0 24 46z"/><path fill="#FBBC05" d="M11.69 28.18A13.2 13.2 0 0 1 11 24c0-1.45.25-2.86.69-4.18v-5.7H4.34A21.99 21.99 0 0 0 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.94 4.34 14.12l7.35 5.7C13.42 14.62 18.27 10.75 24 10.75z"/></svg>
+              <span data-i18n="panel_continue_with_google">Continue with Google</span>
+            </button>
+            <p class="acct-google-hint"><span data-i18n="panel_get">Get</span> <strong data-i18n="panel_7_free_extra_guesses">7 free extra guesses</strong> <span data-i18n="panel_when_you_create_an_account">when you create an account.</span></p>
+          </div>
+          <div id="google-status" class="field-status"></div>
+
+          <a id="get-key-btn" class="get-key-btn" href="https://geoguessrcheats.com/plans" target="_blank" rel="noopener" data-i18n="panel_get_a_key_at_geoguessrcheats_com">Get a key at geoguessrcheats.com/plans</a>
+        </div>
+
+        <!-- Model Selection Settings -->
+        <!-- <div class="settings-section"> -->
+         
+        <!-- </div> -->
+
+        <div class="settings-footer">
+          <button id="manage-plan-button" class="manage-plan-button" style="display: none;" data-i18n="panel_manage_plan">
+            manage plan
+          </button>
+          <a href="mailto:support@geoguessrcheats.com" class="settings-support-link">support@geoguessrcheats.com</a>
+        </div>
+    </div>
+    </div><!-- .pages -->
+  </div><!-- .app -->
+
+  <!-- First-run onboarding -->
+  <div id="onboarding" class="onboarding-overlay" style="display:none">
+    <div class="onboarding-card">
+      <img src="../brand/logo.png" alt="" class="onboarding-logo" aria-hidden="true" draggable="false" />
+      <h2 class="onboarding-title" data-i18n="panel_welcome_to_atlas">Welcome to ATLAS</h2>
+      <p class="onboarding-sub" data-i18n="panel_instant_location_help_for_geoguessr_and">Instant location help for GeoGuessr and OpenGuessr.</p>
+      <ul class="onboarding-list">
+        <li><strong data-i18n="panel_press_guess">Press GUESS</strong> <span data-i18n="panel_during_a_round_to_reveal_the">during a round to reveal the exact location and drop the pin.</span></li>
+        <li><strong data-i18n="panel_stats_history_and_settings">Stats, History and Settings</strong> <span data-i18n="panel_live_in_the_left_tabs">live in the left tabs.</span></li>
+        <li><strong data-i18n="panel_themes">Themes</strong><span data-i18n="panel_switch_light_or_dark_or_pick">: switch light or dark, or pick a preset in Settings.</span></li>
+      </ul>
+      <button id="onboarding-start" class="onboarding-btn" type="button" data-i18n="panel_get_started">Get started</button>
+      <a id="onboarding-key" class="onboarding-link" href="https://geoguessrcheats.com/plans" target="_blank" rel="noopener" data-i18n="panel_need_a_key_get_one_here">Need a key? Get one here</a>
+    </div>
+  </div>
+
+  <script src="../extpay.js"></script>
+  <script src="atlas-shim.js"></script>
+  <!-- Before sidepanel.js: it defines t(), which the panel calls at load. -->
+  <script src="i18n.js"></script>
+  <script src="sidepanel.js"></script>
+</body>
+</html>

@@ -1,0 +1,779 @@
+{
+  "panel_placeholder_paste_your_atlas_xxxxx_key": {
+    "message": "ATLAS-XXXXX 키를 붙여넣으세요"
+  },
+  "panel_placeholder_paste_your_promo_xxxxx_code": {
+    "message": "PROMO-XXXXX 코드를 붙여넣으세요"
+  },
+  "panel_title_home": {
+    "message": "홈"
+  },
+  "panel_title_statistics": {
+    "message": "통계"
+  },
+  "panel_title_history": {
+    "message": "기록"
+  },
+  "panel_title_plans_and_pricing": {
+    "message": "요금제 및 가격"
+  },
+  "panel_title_profile": {
+    "message": "프로필"
+  },
+  "panel_title_discord_notifications": {
+    "message": "Discord 알림"
+  },
+  "panel_title_account_and_license_key": {
+    "message": "계정 및 라이선스 키"
+  },
+  "panel_title_settings": {
+    "message": "설정"
+  },
+  "panel_title_toggle_theme": {
+    "message": "테마 전환"
+  },
+  "panel_title_join_our_discord": {
+    "message": "우리 Discord에 참여하기"
+  },
+  "panel_title_open_the_website": {
+    "message": "웹사이트 열기"
+  },
+  "panel_title_buy_a_key": {
+    "message": "키 구매"
+  },
+  "panel_title_copy_key": {
+    "message": "키 복사"
+  },
+  "panel_arialabel_sections": {
+    "message": "섹션"
+  },
+  "panel_arialabel_plans": {
+    "message": "요금제"
+  },
+  "panel_arialabel_discord": {
+    "message": "Discord"
+  },
+  "panel_arialabel_account": {
+    "message": "계정"
+  },
+  "panel_arialabel_toggle_dark_theme": {
+    "message": "다크 테마 전환"
+  },
+  "panel_arialabel_accent_color": {
+    "message": "강조 색상"
+  },
+  "panel_datatooltip_how_far_the_guess_map_zooms": {
+    "message": "핀이 놓인 뒤 추측 지도가 얼마나 확대되는지입니다. 나라 안 어디에 놓였는지 볼 수 있습니다. 국가 = 넓은 개요, 거리 = 매우 가까움."
+  },
+  "panel_datatooltip_places_pin_on_map_automatically_after": {
+    "message": "좌표를 찾으면 지도에 핀을 자동으로 놓습니다."
+  },
+  "panel_datatooltip_before_placing_the_pin_the_map": {
+    "message": "핀을 놓기 전에 지도가 주변 지역을 자연스럽게 이동하며 확대합니다. 실제 플레이어의 탐색 방식을 흉내 내어 더 자연스러워 보입니다."
+  },
+  "panel_datatooltip_randomizes_placement_within_a_radius_based": {
+    "message": "점수 범위에 따라 반경 안에서 위치를 무작위로 정합니다. 빠른 라운드에서 눈에 띄지 않도록 돕습니다."
+  },
+  "panel_datatooltip_fully_hands_free_after_the_pin": {
+    "message": "완전 자동: 핀이 놓이면 GUESS를 누르고 다음 라운드로 넘어갑니다. 게임 내내 이어집니다. Pro 전용. 사용에 따른 책임은 본인에게 있으며, 게임 자동화는 GeoGuessr 약관에 어긋날 수 있습니다."
+  },
+  "panel_datatooltip_waits_a_random_time_within_this": {
+    "message": "라운드 시작 후 이 범위 안에서 무작위 시간만큼 기다렸다가 추측합니다. 더 자연스러워 보입니다."
+  },
+  "panel_atlas_for_geoguessr": {
+    "message": "GeoGuessr용 Atlas"
+  },
+  "panel_stats": {
+    "message": "통계"
+  },
+  "panel_pro": {
+    "message": "Pro"
+  },
+  "panel_waiting_to_start_task": {
+    "message": "작업 시작 대기 중"
+  },
+  "panel_location": {
+    "message": "위치"
+  },
+  "panel_guess": {
+    "message": "추측"
+  },
+  "panel_coordinates": {
+    "message": "좌표"
+  },
+  "panel_review": {
+    "message": "리뷰"
+  },
+  "panel_would_you_tell_someone_what_this": {
+    "message": "이게 어떤지 다른 사람에게 알려주시겠어요?"
+  },
+  "panel_reviews_are_how_most_people_decide": {
+    "message": "대부분의 사람은 리뷰를 보고 신뢰할지 정합니다. 몇 줄이 점수보다 더 큰 도움이 됩니다."
+  },
+  "panel_not_sure_what_to_write_any": {
+    "message": "무엇을 쓸지 모르겠다면, 아래 중 하나면 충분합니다:"
+  },
+  "panel_which_round_made_you_think_it": {
+    "message": "어느 라운드에서 이게 진짜 되는구나 싶었나요?"
+  },
+  "panel_what_were_you_doing_before_you": {
+    "message": "이걸 찾기 전에는 어떻게 하고 있었나요?"
+  },
+  "panel_which_game_do_you_play_it": {
+    "message": "어떤 게임에서 가장 많이 쓰시나요?"
+  },
+  "panel_your_review_earns_you_7_extra": {
+    "message": "리뷰가 승인되면 7일이 추가로 지급됩니다."
+  },
+  "panel_write_a_review": {
+    "message": "리뷰 쓰기"
+  },
+  "panel_maybe_later": {
+    "message": "나중에"
+  },
+  "panel_do_not_ask_again": {
+    "message": "다시 묻지 않기"
+  },
+  "panel_website": {
+    "message": "웹사이트"
+  },
+  "panel_buy": {
+    "message": "구매"
+  },
+  "panel_statistics": {
+    "message": "통계"
+  },
+  "panel_refresh": {
+    "message": "새로 고침"
+  },
+  "panel_guess_map": {
+    "message": "추측 지도"
+  },
+  "panel_clear_all_history": {
+    "message": "기록 전체 삭제"
+  },
+  "panel_game_history": {
+    "message": "게임 기록"
+  },
+  "panel_recent_guesses": {
+    "message": "최근 추측"
+  },
+  "panel_country": {
+    "message": "국가"
+  },
+  "panel_when": {
+    "message": "시점"
+  },
+  "panel_no_guesses_yet_press_guess_during": {
+    "message": "아직 추측이 없습니다. 라운드 중에 추측을 누르면 기록이 시작됩니다."
+  },
+  "panel_my_profile": {
+    "message": "내 프로필"
+  },
+  "panel_not_signed_in": {
+    "message": "로그인되지 않음"
+  },
+  "panel_open_geoguessr_and_sign_in_then": {
+    "message": "GeoGuessr를 열고 로그인한 뒤 새로 고침을 누르세요"
+  },
+  "panel_open_a_geoguessr_tab_sign_in": {
+    "message": "GeoGuessr 탭을 열어 로그인한 뒤 새로 고침을 눌러 프로필을 불러오세요."
+  },
+  "panel_plans": {
+    "message": "요금제"
+  },
+  "panel_new_here_you_get": {
+    "message": "처음이신가요? 다음을 드립니다"
+  },
+  "panel_7_free_rounds": {
+    "message": "무료 라운드 7회"
+  },
+  "panel_in_your_browser_no_download_and": {
+    "message": "브라우저에서 바로, 다운로드도 계정도 필요 없습니다. 한 푼 내기 전에 빠르고 정확한 추측을 확인하세요."
+  },
+  "panel_per_month": {
+    "message": "월"
+  },
+  "panel_unlimited_rounds": {
+    "message": "무제한 라운드"
+  },
+  "panel_classic_duels_team_duels": {
+    "message": "Classic, Duels, Team Duels"
+  },
+  "panel_discord_integration": {
+    "message": "Discord 연동"
+  },
+  "panel_autoplay_mode": {
+    "message": "자동 플레이 모드"
+  },
+  "panel_browser_extension_windows_app": {
+    "message": "브라우저 확장 프로그램 + Windows 앱"
+  },
+  "panel_choose_pro": {
+    "message": "Pro 선택"
+  },
+  "panel_best_deal": {
+    "message": "최고의 선택"
+  },
+  "panel_yearly": {
+    "message": "연간"
+  },
+  "panel_per_year": {
+    "message": "연"
+  },
+  "panel_179_88_normally": {
+    "message": "정가 €179.88"
+  },
+  "panel_save_146": {
+    "message": "€146 절약"
+  },
+  "panel_everything_in_pro": {
+    "message": "Pro의 모든 기능"
+  },
+  "panel_no_machine_lock": {
+    "message": "기기 잠금 없음"
+  },
+  "panel_dedicated_discord_support": {
+    "message": "전담 Discord 지원"
+  },
+  "panel_roadmap_priority_votes": {
+    "message": "로드맵 우선 투표권"
+  },
+  "panel_annual_billing_cycle": {
+    "message": "연간 결제 주기"
+  },
+  "panel_choose_yearly": {
+    "message": "연간 선택"
+  },
+  "panel_lifetime": {
+    "message": "Lifetime"
+  },
+  "panel_one_time": {
+    "message": "1회"
+  },
+  "panel_full_access": {
+    "message": "전체 이용"
+  },
+  "panel_early_access_to_new_features": {
+    "message": "새 기능 우선 이용"
+  },
+  "panel_support_development_team": {
+    "message": "개발팀 후원"
+  },
+  "panel_roadmap_participation": {
+    "message": "로드맵 참여"
+  },
+  "panel_choose_lifetime": {
+    "message": "Lifetime 선택"
+  },
+  "panel_one_time_payment": {
+    "message": "1회 결제"
+  },
+  "panel_no_auto_renewal": {
+    "message": "자동 갱신 없음"
+  },
+  "panel_instant_email_delivery": {
+    "message": "이메일 즉시 발송"
+  },
+  "panel_pay_with": {
+    "message": "결제 수단:"
+  },
+  "panel_crypto_gift_cards_cs2_skins": {
+    "message": "암호화폐, 기프트 카드, CS2 스킨"
+  },
+  "panel_and_more": {
+    "message": "등."
+  },
+  "panel_discord": {
+    "message": "DISCORD"
+  },
+  "panel_webhook": {
+    "message": "웹후크"
+  },
+  "panel_show": {
+    "message": "표시"
+  },
+  "panel_save": {
+    "message": "저장"
+  },
+  "panel_send_test": {
+    "message": "테스트 전송"
+  },
+  "panel_not_connected": {
+    "message": "연결되지 않음"
+  },
+  "panel_notifications": {
+    "message": "알림"
+  },
+  "panel_send_a_message_on_each_guess": {
+    "message": "추측할 때마다 메시지 보내기"
+  },
+  "panel_include_coordinates": {
+    "message": "좌표 포함"
+  },
+  "panel_include_country": {
+    "message": "국가 포함"
+  },
+  "panel_settings": {
+    "message": "설정"
+  },
+  "panel_appearance": {
+    "message": "모양"
+  },
+  "panel_preset": {
+    "message": "프리셋"
+  },
+  "panel_default_light_dark": {
+    "message": "기본 (라이트/다크)"
+  },
+  "panel_ocean": {
+    "message": "Ocean"
+  },
+  "panel_forest": {
+    "message": "Forest"
+  },
+  "panel_sunset": {
+    "message": "Sunset"
+  },
+  "panel_cyberpunk": {
+    "message": "Cyberpunk"
+  },
+  "panel_nord": {
+    "message": "Nord"
+  },
+  "panel_dracula": {
+    "message": "Dracula"
+  },
+  "panel_midnight_gold": {
+    "message": "Midnight Gold"
+  },
+  "panel_emerald": {
+    "message": "Emerald"
+  },
+  "panel_cherry_blossom": {
+    "message": "Cherry Blossom"
+  },
+  "panel_lavender": {
+    "message": "Lavender"
+  },
+  "panel_density": {
+    "message": "밀도"
+  },
+  "panel_comfortable": {
+    "message": "넓게"
+  },
+  "panel_compact": {
+    "message": "좁게"
+  },
+  "panel_text_size": {
+    "message": "글자 크기"
+  },
+  "panel_reset": {
+    "message": "초기화"
+  },
+  "panel_coordinates_2": {
+    "message": "좌표"
+  },
+  "panel_format": {
+    "message": "형식"
+  },
+  "panel_decimal": {
+    "message": "십진수"
+  },
+  "panel_dms": {
+    "message": "DMS"
+  },
+  "panel_decimals": {
+    "message": "소수 자릿수"
+  },
+  "panel_copy_coordinates_on_each_guess": {
+    "message": "추측할 때마다 좌표 복사"
+  },
+  "panel_access": {
+    "message": "접근"
+  },
+  "panel_quick_open_button_on_the_game": {
+    "message": "게임 페이지에 빠른 열기 버튼"
+  },
+  "panel_enable_on_geoguessr": {
+    "message": "GeoGuessr에서 사용"
+  },
+  "panel_enable_on_openguessr": {
+    "message": "OpenGuessr에서 사용"
+  },
+  "panel_guess_shortcut": {
+    "message": "추측 단축키"
+  },
+  "panel_set_in_browser": {
+    "message": "브라우저에서 설정"
+  },
+  "panel_data_and_privacy": {
+    "message": "데이터 및 개인정보"
+  },
+  "panel_log_guesses_stats_and_history": {
+    "message": "추측 기록 (통계 및 기록)"
+  },
+  "panel_show_my_geoguessr_character_on_the": {
+    "message": "웹사이트 대시보드에 내 GeoGuessr 캐릭터 표시"
+  },
+  "panel_reads_the_items_your_character_wears": {
+    "message": "캐릭터가 착용한 아이템만 읽습니다. 언제든지 대시보드에서 캐릭터를 삭제할 수 있습니다."
+  },
+  "panel_keep": {
+    "message": "보관"
+  },
+  "panel_all": {
+    "message": "전체"
+  },
+  "panel_export_json": {
+    "message": "JSON 내보내기"
+  },
+  "panel_export_csv": {
+    "message": "CSV 내보내기"
+  },
+  "panel_clear_all_data": {
+    "message": "모든 데이터 삭제"
+  },
+  "panel_map_zoom": {
+    "message": "지도 확대"
+  },
+  "panel_region": {
+    "message": "지역"
+  },
+  "panel_auto_place": {
+    "message": "자동 배치"
+  },
+  "panel_auto_place_2": {
+    "message": "자동 배치"
+  },
+  "panel_smart_zoom": {
+    "message": "스마트 줌"
+  },
+  "panel_range": {
+    "message": "범위"
+  },
+  "panel_exact_placement": {
+    "message": "정확한 배치"
+  },
+  "panel_5000_pts": {
+    "message": "5000점"
+  },
+  "panel_auto_submit": {
+    "message": "자동 제출"
+  },
+  "panel_guess_delay": {
+    "message": "추측 지연"
+  },
+  "panel_guess_delay_2": {
+    "message": "추측 지연"
+  },
+  "panel_2_to_5_s": {
+    "message": "2~5초"
+  },
+  "panel_account": {
+    "message": "계정"
+  },
+  "panel_upgrade_to_pro": {
+    "message": "Pro로 업그레이드"
+  },
+  "panel_upgrade": {
+    "message": "업그레이드"
+  },
+  "panel_sign_up": {
+    "message": "가입"
+  },
+  "panel_log_in": {
+    "message": "로그인"
+  },
+  "panel_sign_in_for_free_mode": {
+    "message": "무료 모드로 로그인"
+  },
+  "panel_account_license": {
+    "message": "계정 및 라이선스"
+  },
+  "panel_free_mode": {
+    "message": "무료 모드"
+  },
+  "panel_signed_in_with_google": {
+    "message": "Google로 로그인됨"
+  },
+  "panel_license_key": {
+    "message": "라이선스 키"
+  },
+  "panel_activate": {
+    "message": "활성화"
+  },
+  "panel_change_key": {
+    "message": "키 변경"
+  },
+  "panel_15_free_rounds_in_the_discord": {
+    "message": "디스코드에서 무료 15라운드"
+  },
+  "panel_join_pick_geoguessr_and_redeem_the": {
+    "message": "참여해서 GeoGuessr를 고른 다음 여기에서 코드를 사용하세요."
+  },
+  "panel_join_pick_geoguessr_and_your_code": {
+    "message": "참여해서 GeoGuessr를 고르면 코드가 개인 메시지로 도착합니다."
+  },
+  "panel_join": {
+    "message": "참여"
+  },
+  "panel_redeem_a_code": {
+    "message": "코드 사용하기"
+  },
+  "panel_redeem": {
+    "message": "사용"
+  },
+  "panel_or": {
+    "message": "또는"
+  },
+  "panel_continue_with_google": {
+    "message": "Google로 계속하기"
+  },
+  "panel_get": {
+    "message": "받기"
+  },
+  "panel_7_free_extra_guesses": {
+    "message": "무료 추가 추측 7회"
+  },
+  "panel_when_you_create_an_account": {
+    "message": "계정을 만들면 드립니다."
+  },
+  "panel_get_a_key_at_geoguessrcheats_com": {
+    "message": "geoguessrcheats.com/plans 에서 키를 받으세요"
+  },
+  "panel_manage_plan": {
+    "message": "요금제 관리"
+  },
+  "panel_welcome_to_atlas": {
+    "message": "ATLAS에 오신 것을 환영합니다"
+  },
+  "panel_instant_location_help_for_geoguessr_and": {
+    "message": "GeoGuessr와 OpenGuessr를 위한 즉각적인 위치 도움말."
+  },
+  "panel_press_guess": {
+    "message": "추측 누르기"
+  },
+  "panel_during_a_round_to_reveal_the": {
+    "message": "라운드 중에 정확한 위치를 확인하고 핀을 놓습니다."
+  },
+  "panel_stats_history_and_settings": {
+    "message": "통계, 기록, 설정"
+  },
+  "panel_live_in_the_left_tabs": {
+    "message": "왼쪽 탭에 있습니다."
+  },
+  "panel_themes": {
+    "message": "테마"
+  },
+  "panel_switch_light_or_dark_or_pick": {
+    "message": ": 라이트와 다크를 전환하거나 설정에서 프리셋을 고르세요."
+  },
+  "panel_get_started": {
+    "message": "시작하기"
+  },
+  "panel_need_a_key_get_one_here": {
+    "message": "키가 필요하신가요? 여기서 받으세요"
+  },
+  "bg_err_no_active_tab_found": {
+    "message": "활성 탭을 찾을 수 없습니다."
+  },
+  "bg_err_open_the_atlas_sidebar_from_the": {
+    "message": "Firefox 도구 모음에서 ATLAS 사이드바를 여세요."
+  },
+  "bg_err_side_panel_not_supported_in_this": {
+    "message": "이 브라우저는 사이드 패널을 지원하지 않습니다."
+  },
+  "bg_err_enter_your_key_first": {
+    "message": "먼저 키를 입력하세요"
+  },
+  "bg_err_empty_response": {
+    "message": "빈 응답"
+  },
+  "ext_action_atlas_for_geoguessr": {
+    "message": "GeoGuessr용 ATLAS"
+  },
+  "content_err_no_coordinates_yet_start_a_round": {
+    "message": "아직 좌표가 없습니다. 먼저 라운드를 시작하세요."
+  },
+  "content_attr_open_the_atlas_side_panel": {
+    "message": "ATLAS 사이드 패널 열기"
+  },
+  "ext_desc_geoguessr_solver_and_cheat_side_panel": {
+    "message": "GeoGuessr 솔버 겸 치트 사이드 패널: 현재 스트리트 뷰 라운드의 국가, 지역, 좌표를 예측합니다."
+  },
+  "ext_cmd_trigger_guess_in_the_atlas_side": {
+    "message": "ATLAS 사이드 패널에서 추측 실행"
+  },
+  "panel_status_pro_features_activated": {
+    "message": "Pro 기능이 활성화되었습니다!"
+  },
+  "panel_status_error": {
+    "message": "오류:"
+  },
+  "panel_status_reloading_page_to_enable_autowin": {
+    "message": "autowin을 켜기 위해 페이지를 새로 고치는 중..."
+  },
+  "panel_status_please_start_a_geoguessr_round_and": {
+    "message": "GeoGuessr 라운드를 시작한 뒤 다시 시도하세요."
+  },
+  "panel_status_no_fresh_reading_for_this_round": {
+    "message": "이 라운드의 최신 판독값이 아직 없습니다."
+  },
+  "panel_status_ignored_a_reading_in_open_water": {
+    "message": "바다 한가운데의 판독값을 무시하고 이전 라운드를 유지했습니다."
+  },
+  "panel_status_coordinates_extracted_successfully": {
+    "message": "좌표를 성공적으로 가져왔습니다!"
+  },
+  "panel_status_round_changed_during_the_guess_delay": {
+    "message": "추측 지연 중에 라운드가 바뀌어 건너뛰었습니다"
+  },
+  "panel_status_payment_successful_premium_features_unlocked": {
+    "message": "결제가 완료되었습니다! 프리미엄 기능이 열렸습니다."
+  },
+  "panel_status_new_coordinates_detected_click_extract_to": {
+    "message": "새 좌표를 찾았습니다! \"EXTRACT\"를 눌러 확인하세요."
+  },
+  "panel_notif_atlas_connected": {
+    "message": "ATLAS 연결됨"
+  },
+  "panel_notif_atlas_guess": {
+    "message": "ATLAS 추측"
+  },
+  "panel_ui_loading": {
+    "message": "불러오는 중..."
+  },
+  "panel_ui_activated": {
+    "message": "활성화됨:"
+  },
+  "panel_status_opening_google_sign_in": {
+    "message": "Google 로그인을 여는 중..."
+  },
+  "panel_status_enter_your_code_first": {
+    "message": "먼저 코드를 입력하세요"
+  },
+  "panel_status_that_does_not_look_like_a": {
+    "message": "PROMO 코드 형식이 아닙니다."
+  },
+  "panel_status_redeeming": {
+    "message": "사용 처리 중..."
+  },
+  "panel_status_could_not_reach_the_server_try": {
+    "message": "서버에 연결하지 못했습니다. 다시 시도해 주세요."
+  },
+  "panel_status_code_accepted_1_rounds_left": {
+    "message": "코드가 적용되었습니다. $1라운드 남았습니다."
+  },
+  "panel_status_that_code_does_not_exist": {
+    "message": "존재하지 않는 코드입니다."
+  },
+  "panel_status_that_code_is_already_used_on": {
+    "message": "이 코드는 이미 다른 기기에서 사용 중입니다."
+  },
+  "panel_status_that_code_has_expired": {
+    "message": "만료된 코드입니다."
+  },
+  "panel_status_too_many_tries_wait_an_hour": {
+    "message": "시도가 너무 많습니다. 한 시간 뒤에 다시 시도하세요."
+  },
+  "panel_status_that_code_was_refused": {
+    "message": "코드가 거부되었습니다."
+  },
+  "panel_ui_renew_pro": {
+    "message": "Pro 갱신"
+  },
+  "panel_status_your_subscription_payment_is_past_due": {
+    "message": "구독 결제가 연체되었습니다. 프리미엄 기능을 계속 쓰려면 구독을 갱신하세요."
+  },
+  "panel_status_this_feature_requires_premium_access_please": {
+    "message": "이 기능은 프리미엄 이용이 필요합니다. 업그레이드하거나 무료 체험을 시작하세요."
+  },
+  "panel_status_error_checking_subscription_status_please_try": {
+    "message": "구독 상태를 확인하지 못했습니다. 다시 시도해 주세요."
+  },
+  "panel_ui_pro_mode_enabled": {
+    "message": "Pro 모드 사용 중"
+  },
+  "panel_notif_trial_expired": {
+    "message": "체험 기간 종료"
+  },
+  "panel_notif_your_free_trial_has_ended_upgrade": {
+    "message": "무료 체험이 끝났습니다. 프리미엄 기능을 계속 쓰려면 업그레이드하세요."
+  },
+  "panel_notif_upgrade_now": {
+    "message": "지금 업그레이드"
+  },
+  "panel_notif_payment_failed": {
+    "message": "결제 실패"
+  },
+  "panel_notif_your_payment_could_not_be_processed": {
+    "message": "결제를 처리하지 못했습니다. 다시 시도해 주세요."
+  },
+  "panel_notif_retry_payment": {
+    "message": "결제 다시 시도"
+  },
+  "panel_notif_payment_past_due": {
+    "message": "결제 연체"
+  },
+  "panel_notif_your_subscription_payment_is_past_due": {
+    "message": "구독 결제가 연체되었습니다. 프리미엄 기능을 계속 이용하려면 결제 수단을 업데이트하세요."
+  },
+  "panel_notif_update_payment": {
+    "message": "결제 수단 업데이트"
+  },
+  "panel_notif_subscription_cancelled": {
+    "message": "구독 취소됨"
+  },
+  "panel_notif_reactivate": {
+    "message": "다시 활성화"
+  },
+  "panel_notif_subscription_expired": {
+    "message": "구독 만료됨"
+  },
+  "panel_notif_your_subscription_has_expired_renew_to": {
+    "message": "구독이 만료되었습니다. 프리미엄 기능을 계속 쓰려면 갱신하세요."
+  },
+  "panel_notif_renew_now": {
+    "message": "지금 갱신"
+  },
+  "panel_notif_payment_issues_detected": {
+    "message": "결제 문제가 감지되었습니다"
+  },
+  "panel_notif_multiple_payment_attempts_detected_please_contact": {
+    "message": "여러 번의 결제 시도가 감지되었습니다. 문제가 있으면 지원팀에 문의하세요."
+  },
+  "panel_notif_contact_support": {
+    "message": "지원팀 문의"
+  },
+  "panel_status_no_internet_connection_please_check_your": {
+    "message": "인터넷에 연결되어 있지 않습니다. 네트워크를 확인하고 다시 시도하세요."
+  },
+  "panel_status_payment_service_temporarily_unavailable_please_try": {
+    "message": "결제 서비스를 일시적으로 사용할 수 없습니다. 나중에 다시 시도해 주세요."
+  },
+  "panel_status_sign_in_failed_please_try_again": {
+    "message": "로그인에 실패했습니다. 다시 시도해 주세요."
+  },
+  "panel_profile_unavailable": {
+    "message": "프로필을 불러올 수 없음"
+  },
+  "panel_profile_signed_out_hint": {
+    "message": "브라우저에서 GeoGuessr에 로그인한 다음 새로고침을 누르세요."
+  },
+  "panel_profile_open_tab_hint": {
+    "message": "GeoGuessr 탭을 연 다음 새로고침을 누르세요."
+  },
+  "panel_profile_reload_tab_hint": {
+    "message": "패널이 읽을 수 있도록 GeoGuessr 탭을 새로 고친 다음 새로고침을 누르세요."
+  },
+  "panel_has_this_been_useful": {
+    "message": "도움이 되셨나요?"
+  },
+  "panel_a_short_review_on_the_store": {
+    "message": "스토어 페이지에 짧은 리뷰를 남기면 다른 플레이어가 선택하는 데 도움이 됩니다. 따로 따라오는 것은 없습니다."
+  },
+  "panel_open_the_store": {
+    "message": "스토어 열기"
+  }
+}
